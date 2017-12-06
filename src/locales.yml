@@ -1,0 +1,15 @@
+zh-CN:
+  display_name: '中文'
+  hello: '世界，你好 {name}'
+  apple: '一个都没有 | 一个苹果 | {count} 个苹果'
+
+en:
+  display_name: '英文'
+  hello: 'hello world {name}'
+  apple: 'no apples | one apple | {count} apples'
+
+ja:
+  display_name: '日文'
+  hello: 'こんにちは、世界  {name}'
+  apple: 'no apples | one apple | {count} apples'
+

@@ -69,10 +69,10 @@
     </div>
     <div class="grid-y" style="height: 500px;">
       <div class="cell small-6 medium-8 large-2">
-        6/8/2
+        <p v-t="{path:'hello', args:{name: 'hahaha'}}"></p>
       </div>
-      <div class="cell small-6 medium-4 large-10">
-        6/4/10
+      <div class="cell small-6 medium-4 large-10" @click="getName">
+        版本： {{ $t("display_name") }}, {{ $t("hello") }}
       </div>
     </div>
   </div>
@@ -80,8 +80,13 @@
 
 <script>
 export default {
-  name: 'app'
-}
+  name: 'app',
+  methods: {
+    getName: function () {
+      this.$i18n.locale = this.$i18n.locale === 'en' ? 'ja' : 'en';
+    }
+  }
+};
 </script>
 
 <style lang="scss">

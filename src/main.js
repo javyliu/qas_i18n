@@ -5,8 +5,11 @@ import App from './App';
 import router from './router';
 import VueI18n from 'vue-i18n';
 import messages from './locales.yml';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 Vue.use(VueI18n);
+Vue.use(VueAxios, axios);
 
 Vue.config.productionTip = false;
 

@@ -84,6 +84,11 @@ export default {
   methods: {
     getName: function () {
       this.$i18n.locale = this.$i18n.locale === 'en' ? 'ja' : 'en';
+      this.$http
+        .get('http://121.201.1.92:8080/dsx/dsxrollingnotice')
+        .then(response => {
+          console.log(response.data);
+        });
     }
   }
 };

@@ -1,8 +1,25 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div class="top-bar">
+      <div class="top-bar-left text-left">
+        <img src="./assets/img/ww_logo.png">
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <li>
+            <a href="#">One</a>
+          </li>
+          <li>
+            <a href="#">One</a>
+          </li>
+          <li>
+            <a href="#">One</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <router-view/>
-    <div class="grid-x">
+    <!-- <div class="grid-x">
       <div class="cell">full width cell</div>
       <div class="cell">full width cell</div>
     </div>
@@ -74,7 +91,7 @@
       <div class="cell small-6 medium-4 large-10" @click="getName">
         版本： {{ $t("display_name") }}, {{ $t("hello") }}
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -102,7 +119,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 .grid-x div {
   background: #ccc;

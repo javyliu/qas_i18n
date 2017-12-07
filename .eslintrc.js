@@ -9,6 +9,10 @@ module.exports = {
   env: {
     browser: true,
   },
+  globals: {
+    Foundation: false,
+    $: false
+  },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',
   // required to lint *.vue files
@@ -21,6 +25,6 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'semi': ['error', 'always']
+    'semi': ['error', 'always'],
   }
 }

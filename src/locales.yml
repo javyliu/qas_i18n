@@ -1,4 +1,4 @@
-zh-CN:
+zh-cn:
   display_name: '中文'
   hello: '世界，你好 {name}'
   apple: '一个都没有 | 一个苹果 | {count} 个苹果'

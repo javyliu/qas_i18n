@@ -13,10 +13,12 @@
   "dependencies": {
     "axios": "^0.17.1",
     "jquery": "^3.2.1",
+    "motion-ui": "^1.2.3",
     "vue": "^2.5.2",
     "vue-axios": "^2.0.2",
     "vue-i18n": "^7.3.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "what-input": "^5.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

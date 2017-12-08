@@ -1,5 +1,5 @@
 export default {
-  BaseUrl: 'http://m.pipgame.com/en_qas/',
+  BaseUrl: process.env.NODE_ENV === 'production' ? 'http://m.pipgame.com/en_qas/' : 'http://192.168.0.252:7123/en_qas/',
   getLanguage: function () {
     let reg = /lang=(zh-cn|en|ja)/i;
     let mc = location.href.match(reg);

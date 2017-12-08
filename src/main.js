@@ -40,6 +40,6 @@ new Vue({
     this.axios.defaults.baseURL = this.global.BaseUrl + this.$i18n.locale;
   },
   mounted: function () {
-    console.log(this);
+    // console.log(this);
   }
 });

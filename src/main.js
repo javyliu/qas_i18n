@@ -14,10 +14,6 @@ import _global from './global_config';
 Vue.prototype.global = _global;
 Vue.use(VueI18n);
 
-Vue.use(VueAxios, axios);
-
-Vue.config.productionTip = false;
-
 const i18n = new VueI18n({
   locale: _global.getLanguage(), // set locale
   fallbackLocale: 'en',
@@ -26,6 +22,18 @@ const i18n = new VueI18n({
   },
   messages // set locale messages
 });
+// intercepte request
+axios.interceptors.request.use((config) => {
+  if (!/locale=/.test(config.url)) {
+    config.url += ((config.url.indexOf('?') === -1 ? '?' : '&') + 'locale=' + i18n.locale);
+  }
+  return config;
+}, function (error) {
+  return Promise.reject(error);
+});
+Vue.use(VueAxios, axios);
+
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
@@ -37,9 +45,9 @@ new Vue({
   created: function () {
     console.log('app 创建 成功');
     console.log(this.$i18n.locale);
-    this.axios.defaults.baseURL = this.global.BaseUrl + this.$i18n.locale;
+    this.axios.defaults.baseURL = this.global.BaseUrl;
   },
   mounted: function () {
-    // console.log(this);
+    console.log('载入成功');
   }
 });

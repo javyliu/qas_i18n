@@ -24,9 +24,12 @@ export default new Router({
       ]
     },
     {
-      path: 'new_ticket',
+      path: '/new_ticket',
       name: 'new_ticket',
-      component: NewTicket
+      component: NewTicket,
+      props: (route) => {
+        return route.query;
+      }
     }
   ]
 });

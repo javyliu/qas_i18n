@@ -3,7 +3,7 @@
     <search></search>
     <div class="grid-x">
       <div class="cell">
-        <fieldset class="field_cates">
+        <fieldset class="fieldset">
           <legend>
             <h5>Hot Issues</h5>
           </legend>
@@ -31,13 +31,5 @@ export default {
 </script>
 
 <style lang="scss">
-.field_cates {
-  border: 1px solid #dddddd;
-  padding: 1.25rem;
-  margin: 0;
-  legend,
-  h5 {
-    margin-bottom: 0;
-  }
-}
+
 </style>

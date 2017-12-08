@@ -1,2 +1,15 @@
 @include foundation-everything(true);
 @import '~motion-ui/dist/motion-ui';
+.mt_8{
+  margin-top:8px;
+}
+.height_holder{height:39px;}
+.fieldset {
+  border: 1px solid #dddddd;
+  padding: 1.25rem;
+  margin: 0;
+  legend,
+  h5 {
+    margin-bottom: 0;
+  }
+}

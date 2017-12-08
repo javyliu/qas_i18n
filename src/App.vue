@@ -49,6 +49,7 @@
 <script>
 export default {
   name: 'app',
+  // props: ['ccn'],
   mounted () {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
     this.select_lan = new Foundation.DropdownMenu($('.dropdown'), {
@@ -60,9 +61,7 @@ export default {
   methods: {
     change_language: function (curLan) {
       this.$i18n.locale = curLan;
-      this.axios.defaults.baseURL =
-        'http://m.pipgame.com/en_qas/' + this.$i18n.locale;
-      console.log(this.$i18n.locale);
+      this.axios.defaults.baseURL = this.global.BaseUrl + this.$i18n.locale;
     }
   },
   computed: {

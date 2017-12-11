@@ -4,7 +4,7 @@ import Home from '@/components/home';
 import ListQas from '@/components/list_qas';
 import Cates from '@/components/cates';
 import NewTicket from '@/components/new_ticket';
-const QaCates = require('@/data/cates.json');
+// const QaCates = require('@/data/cates.json');
 
 Vue.use(Router);
 export default new Router({
@@ -12,15 +12,17 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home,
-      props: { cates: QaCates }
+      component: Home
     },
     {
       path: '/cates',
       component: Cates,
-      props: { cates: QaCates },
       children: [
-        { path: 'list_qas/:cate_id', component: ListQas }
+        {
+          name: 'list_qas',
+          path: 'list_qas/:cate_id',
+          component: ListQas
+        }
       ]
     },
     {

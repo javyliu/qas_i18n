@@ -61,7 +61,6 @@ export default {
   methods: {
     change_language: function (curLan) {
       this.$i18n.locale = curLan;
-      this.axios.defaults.baseURL = this.global.BaseUrl + this.$i18n.locale;
     }
   },
   computed: {
@@ -115,12 +114,7 @@ a:focus {
     color: $primary-color;
   }
 }
-.router-link-exact-active,
-.router-link-exact-active:hover,
-.router-link-exact-active:visited {
-  color: #333;
-  cursor: default;
-}
+
 .dropdown.menu {
   li.is-active {
     a {

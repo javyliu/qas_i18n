@@ -3,10 +3,13 @@
     <search></search>
     <div class="grid-x">
       <div class="cell">
-        <ul class="inline_cates">
+        <ul class="inline_cates" v-if="common_cates">
           <li>CATEGORIES:</li>
-          <li v-for="(item,index) in cates" :key="index">
-            <router-link :to="{path: `/cates/list_qas/${item}`}">{{item}}</router-link>
+          <li>
+            <router-link :to="{path: `/cates/list_qas/all`}">all</router-link>
+          </li>
+          <li v-for="item in common_cates" :key="item.id">
+            <router-link :to="{path: `/cates/list_qas/${item.id}`}">{{item.name}}</router-link>
           </li>
         </ul>
       </div>
@@ -20,7 +23,18 @@ import Search from '@/components/search';
 
 export default {
   name: 'cates',
-  props: ['cates'],
+  data () {
+    return {
+      common_cates: null
+    };
+  },
+  created () {
+    this.global.getCommonCates().then(
+      function (res) {
+        this.common_cates = res;
+      }.bind(this)
+    );
+  },
   components: {
     Search
   }
@@ -37,6 +51,19 @@ export default {
     a {
       color: #93a8ab;
     }
+  }
+
+  .router-link-exact-active,
+  .router-link-exact-active:hover,
+  .router-link-exact-active:visited {
+    color: #333;
+    cursor: default;
+  }
+  .router-link-active,
+  .router-link-exact-active:hover,
+  .router-link-exact-active:visited {
+    color: #222;
+    cursor: default;
   }
 }
 </style>

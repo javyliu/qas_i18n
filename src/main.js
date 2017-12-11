@@ -22,6 +22,9 @@ const i18n = new VueI18n({
   },
   messages // set locale messages
 });
+
+axios.defaults.baseURL = _global.BaseUrl;
+
 // intercepte request
 axios.interceptors.request.use((config) => {
   if (!/locale=/.test(config.url)) {
@@ -31,6 +34,41 @@ axios.interceptors.request.use((config) => {
 }, function (error) {
   return Promise.reject(error);
 });
+
+// get cates
+
+_global.getCommonCates = function () {
+  return new Promise(function (resolve, reject) {
+    if (_global.common_cates) {
+      console.log('common_cates 存在');
+      resolve(_global.common_cates);
+    } else {
+      console.log('common_cates 不存在');
+      axios.get('en_qas/common_cates').then(function (res) {
+        console.log('common_cates 返回');
+        _global.common_cates = res.data;
+        resolve(res.data);
+      });
+    }
+  });
+};
+
+_global.getUserCates = function () {
+  return new Promise(function (resolve, reject) {
+    if (_global.user_cates) {
+      console.log('user_cates 存在');
+      resolve(_global.user_cates);
+    } else {
+      console.log('user_cates 不存在');
+      axios.get('en_qas/user_cates').then(function (res) {
+        console.log('user_cates 返回');
+        _global.user_cates = res.data;
+        resolve(res.data);
+      });
+    }
+  });
+};
+
 Vue.use(VueAxios, axios);
 
 Vue.config.productionTip = false;
@@ -43,9 +81,11 @@ new Vue({
   template: '<App></App>',
   components: { App },
   created: function () {
-    console.log('app 创建 成功');
+    console.log('app 创建 成功,获取类别数据');
+    if (this.$route.query.game_id) {
+      this.global.game_id = this.$route.query.game_id;
+    }
     console.log(this.$i18n.locale);
-    this.axios.defaults.baseURL = this.global.BaseUrl;
   },
   mounted: function () {
     console.log('载入成功');

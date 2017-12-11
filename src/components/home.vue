@@ -7,12 +7,16 @@
           <legend>
             <h5>Hot Issues</h5>
           </legend>
-          <ul>
-            <li v-for="(item,index) in cates" :key="index">
-              <router-link :to="{path: `/cates/list_qas/${item}`}">{{item}}</router-link>
+          <div class="loading" v-if="loading">
+            Loading...
+          </div>
+          <ul v-if="common_cates">
+            <li v-for="item in common_cates" :key="item.id">
+              <router-link :to="{path: `/cates/list_qas/${item.id}`}">{{item.name}}</router-link>
             </li>
           </ul>
         </fieldset>
+        </ul>
       </div>
     </div>
   </div>
@@ -23,7 +27,20 @@ import Search from '@/components/search';
 
 export default {
   name: 'home',
-  props: ['cates'],
+  data () {
+    return {
+      common_cates: null,
+      loading: true
+    };
+  },
+  created () {
+    this.global.getCommonCates().then(
+      function (res) {
+        this.common_cates = res;
+        this.loading = false;
+      }.bind(this)
+    );
+  },
   components: {
     Search
   }

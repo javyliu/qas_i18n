@@ -75,7 +75,10 @@ export default {
       if (this.$route.name === 'home') {
         console.log('current page');
         // this.global.getCommonCates();
-        this.$router.push({ name: 'home', query: { rt: Math.random() } });
+        this.$router.push({
+          name: 'home',
+          query: { rt: new Date().getTime() }
+        });
       } else {
         this.$router.push({ name: 'home' });
       }

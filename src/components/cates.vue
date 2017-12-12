@@ -4,9 +4,9 @@
     <div class="grid-x">
       <div class="cell">
         <ul class="inline_cates" v-if="common_cates">
-          <li>CATEGORIES:</li>
+          <li>{{$t('category')}}:</li>
           <li>
-            <router-link :to="{path: `/cates/list_qas/all`}">all</router-link>
+            <router-link :to="{path: `/cates/list_qas/all`}">{{$t('c_all')}}</router-link>
           </li>
           <li v-for="item in common_cates" :key="item.id">
             <router-link :to="{path: `/cates/list_qas/${item.id}`}">{{item.name}}</router-link>
@@ -47,23 +47,22 @@ export default {
   margin: 0;
   li {
     display: inline-block;
-    padding-left: 10px;
-    a {
-      color: #93a8ab;
-    }
   }
+  a {
+    padding: 2px 5px;
+  }
+  // .router-link-exact-active,
+  // .router-link-exact-active:hover,
+  // .router-link-exact-active:visited {
 
-  .router-link-exact-active,
-  .router-link-exact-active:hover,
-  .router-link-exact-active:visited {
-    color: #333;
-    cursor: default;
-  }
+  // }
   .router-link-active,
-  .router-link-exact-active:hover,
-  .router-link-exact-active:visited {
-    color: #222;
+  .router-link-active:hover,
+  .router-link-active:visited {
+    color: $white;
     cursor: default;
+    background-color: $primary-color;
+    border-radius: 1000px;
   }
 }
 </style>

@@ -1,11 +1,72 @@
 
 en:
-  display_name: '英文'
+  display_name: English
+  btn_search: Search
+  search_holder: Find an Answer
+
+  support_home: Support Home
+  all_qa: All Questions
+  submit_ticket: Submit a Ticket
+  language: Languages
+  hot_issues: Hot Issues
+  menu: Menu
+
+  category: CATEGORIES
+  c_all: All
+
+  error_request: Request error!
+  submit_success: Ticket submit success!
+  submit_failed: Ticket submit failed!
+  submit_ticket_title: SUBMIT TICKET
+  ticket_id: ID
+  ticket_email: Email Address
+  ticket_topic: Topic
+  ticket_detail: Detail
+  td_des: Use a few words(0~400) to summarize your issue
+  td_promise: Will respond by email within 24 hours
+  ticket_btn: SUBMIT A TICKET
+  ticket_select: Make a Selection
+  my_tickets: My Tickets
+
+  completed: Completed
+  pending: Pending
+
+  next_page: Next Page
+
+
   hello: 'hello world {name}'
   apple: 'no apples | one apple | {count} apples'
 
-ja:
-  display_name: '日文'
-  hello: 'こんにちは、世界  {name}'
-  apple: 'no apples | one apple | {count} apples'
+th:
+  display_name: 'Thailand'
+  btn_search: 搜索
+  search_holder: 查找问题
+
+  support_home: 首页
+  all_qa: 所有问题
+  submit_ticket: 提交
+  language: 语言
+  hot_issues: 热门问题
+  menu: 菜单
+
+  category: 类别
+  c_all: 所有问题
+
+  error_request: 请求出错!
+  submit_success: 提交问题操作成功!
+  submit_failed: 提交问题操作失败!
+  submit_ticket_title: 提交问题
+  ticket_id: ID
+  ticket_email: 邮箱地址
+  ticket_topic: 类别
+  ticket_detail: 问题描述
+  td_des: 0~400字之间
+  td_promise: 我们将在24小时之内邮件回复
+  ticket_btn: 提交
+  ticket_select: 选择类别
+  my_tickets: 我提交的问题
+
+  completed: 已完成
+  pending: 处理中
+  next_page: 下一页
 

@@ -4,7 +4,7 @@ import Home from '@/components/home';
 import ListQas from '@/components/list_qas';
 import Cates from '@/components/cates';
 import NewTicket from '@/components/new_ticket';
-// const QaCates = require('@/data/cates.json');
+import MyTickets from '@/components/my_tickets';
 
 Vue.use(Router);
 export default new Router({
@@ -28,10 +28,12 @@ export default new Router({
     {
       path: '/new_ticket',
       name: 'new_ticket',
-      component: NewTicket,
-      props: (route) => {
-        return route.query;
-      }
+      component: NewTicket
+    },
+    {
+      path: '/my_tickets',
+      name: 'my_tickets',
+      component: MyTickets
     }
   ]
 });

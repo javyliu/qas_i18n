@@ -8,6 +8,8 @@
             {{item.question}}
           </p>
           <div v-html="item.answer"></div>
+          <div class="time text-right">--{{item.created_at}}</div>
+          <hr>
         </li>
       </ul>
     </div>
@@ -57,6 +59,7 @@ export default {
   margin-top: 1rem;
   p {
     text-indent: 2em;
+    text-align: justify;
     &.title {
       text-indent: 0;
       margin-bottom: 5px;

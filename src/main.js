@@ -82,9 +82,11 @@ new Vue({
   components: { App },
   created: function () {
     console.log('app 创建 成功,获取类别数据');
-    if (this.$route.query.game_id) {
-      this.global.game_id = this.$route.query.game_id;
-    }
+    // if (this.$route.query.game_id) {
+    //   this.global.game_id = this.$route.query.game_id;
+    // }
+    this.global.init_data = this.$route.query;
+    this.global.game_id = this.global.init_data.game_id || this.global.game_id;
     console.log(this.$i18n.locale);
   },
   mounted: function () {

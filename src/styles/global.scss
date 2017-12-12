@@ -13,3 +13,23 @@
     margin-bottom: 0;
   }
 }
+.router-link-active,
+.router-link-active:hover,
+.router-link-active:visited {
+  color: $primary-color;
+  cursor: default;
+}
+.time{
+  font-size: 14px;
+  color: #888;
+}
+
+.divider{
+  border-top: solid 1px #b9b5b5;
+  height: 1px;
+  clear: both;
+  width:100%;
+}
+.indent_2em{
+  text-indent: 2em;
+}

@@ -1,8 +1,8 @@
 <template>
   <div class="input-group">
-    <input class="input-group-field" type="text" v-model.trim="keyword" placeholder="Find an Answer">
+    <input class="input-group-field" type="text" v-model.trim="keyword" :placeholder="$t('search_holder')">
     <div class="input-group-button">
-      <input type="submit" class="button alert" value="Search" @click="query_common_qas">
+      <input type="submit" class="button alert" :value="$t('btn_search')" @click="query_common_qas">
     </div>
   </div>
 </template>

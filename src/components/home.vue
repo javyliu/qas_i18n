@@ -5,14 +5,14 @@
       <div class="cell">
         <fieldset class="fieldset">
           <legend>
-            <h5>Hot Issues</h5>
+            <h5>{{$t('hot_issues')}}</h5>
           </legend>
           <div class="loading" v-if="loading">
             Loading...
           </div>
           <ul v-if="common_cates">
             <li v-for="item in common_cates" :key="item.id">
-              <router-link :to="{path: `/cates/list_qas/${item.id}`}">{{item.name}}</router-link>
+              <router-link :to="{path: `/cates/list_qas/${item.id}`}" v-once>{{item.name}}</router-link>
             </li>
           </ul>
         </fieldset>
@@ -33,13 +33,20 @@ export default {
       loading: true
     };
   },
+  watch: {
+    $route: 'getData'
+  },
   created () {
-    this.global.getCommonCates().then(
-      function (res) {
+    this.getData();
+  },
+  methods: {
+    getData () {
+      console.log('watch common cates');
+      this.global.getCommonCates().then(res => {
         this.common_cates = res;
         this.loading = false;
-      }.bind(this)
-    );
+      });
+    }
   },
   components: {
     Search

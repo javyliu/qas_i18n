@@ -3,48 +3,50 @@
     <div class="cell">
       <fieldset class="fieldset">
         <legend>
-          <strong>SUBMIT TICKET</strong>
+          <strong>{{$t("submit_ticket_title")}}</strong>
         </legend>
-        <form class="new_en_qa" id="new_en_qa">
+        <form @submit.prevent="ask">
+          <div class="callout" :class="msg_class">
+            <h5>{{msg}}</h5>
+          </div>
           <div class="grid-x grid-margin-x medium-up-3">
             <div class="cell">
-              <label class="height_holder">ID:
-                <strong>{{id}}</strong>
+              <label class="height_holder">{{$t("ticket_id")}}:
               </label>
+              <div class="height_holder">
+                <strong>{{init_data.id}}</strong>
+              </div>
             </div>
             <div class="cell">
-              <label>Email Address
+              <label>{{$t("ticket_email")}}
                 <em>*</em>
               </label>
-              <input type="email" placeholder="javy@pearlinpalm.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" id="en_qa_email" />
+              <input type="email" v-model="email" placeholder="javy@pearlinpalm.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" />
             </div>
             <div class="cell">
-              <label>Topic
+              <label>{{$t("ticket_topic")}}
                 <em>*</em>
               </label>
-              <select required="required">
-                <option value="">Make a Selection</option>
-                <option value="16"> ฉันล็อกอินไม่ได้แล้ว </option>
-                <option value="17">บัญชีของฉันมีปัญหา</option>
-                <option value="19">ฉันมีปัญหาตอนซื้อ</option>
-                <option value="20">ปัญหาอื่นๆ</option>
+              <select required="required" v-model="qa_cate_id">
+                <option value="">{{$t("ticket_select")}}</option>
+                <option v-for="item in user_cates" :key="item.id" :value="item.id">{{item.name}}</option>
               </select>
             </div>
           </div>
           <div class="grid-x">
             <div class="cell">
-              <label>Detail
+              <label>{{$t("ticket_detail")}}
                 <em>*</em>
-                <small> Use a few words(0~400) to summarize your issue </small>
+                <small> {{$t("td_des")}} </small>
                 <em>*</em>
               </label>
-              <textarea placeholder="Detail" required="required" name="en_qa[question]" id="en_qa_question">
+              <textarea placeholder="Detail" required="required" v-model="question" id="en_qa_question">
               </textarea>
             </div>
           </div>
-          <blockquote>Will respond by email within 24 hours</blockquote>
+          <blockquote>{{$t("td_promise")}}</blockquote>
           <div class="actions">
-            <input type="submit" name="commit" value="SUBMIT A TICKET" class="button tiny" />
+            <input type="submit" name="commit" :value="$t('ticket_btn')" class="button tiny" />
           </div>
         </form>
       </fieldset>
@@ -55,7 +57,7 @@
 <script>
 /*
 http://m.pipgame.com/en_qas/new?id=xxx&name=xxx&p_name=xxx&game_id=xxx
-
+http://localhost:8080/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=19&acc_name=xxx&version=0.1.0&lang=en
 id: 账号id
 name: 角色名
 p_name:分区名
@@ -68,7 +70,70 @@ lang：语言
 */
 export default {
   name: 'new_ticket',
-  props: ['id', 'name', 'p_name', 'game_id', 'acc_name', 'version', 'lang']
+  data () {
+    return {
+      email: null,
+      qa_cate_id: '',
+      question: null,
+      user_cates: null,
+      msg: null,
+      msg_class: 'hide'
+    };
+  },
+  created () {
+    this.global.getUserCates().then(
+      function (res) {
+        this.user_cates = res;
+      }.bind(this)
+    );
+  },
+  computed: {
+    init_data: function () {
+      console.log('调用计算属性');
+      return this.global.init_data;
+    }
+  },
+  methods: {
+    ask () {
+      console.log('form is submit');
+      let data = {
+        qa: {
+          game_role_id: this.init_data.id,
+          qa_cate_id: this.qa_cate_id,
+          question: this.question,
+          email: this.email
+        },
+        game_id: this.global.game_id
+      };
+      this.$http
+        .post('/en_qas', data)
+        .then(res => {
+          console.log('then back');
+          if (res.data.code === 'failed') {
+            // 提交出错
+            this.msg = this.$i18n.t('submit_failed');
+            this.msg_class = 'alert';
+          } else {
+            // 提交成功
+            this.msg = this.$i18n.t('submit_success');
+            this.msg_class = 'success';
+            this.qa_cate_id = null;
+            this.question = null;
+          }
+        })
+        .catch(error => {
+          console.log('catch back', arguments);
+          if (error.response) {
+            this.msg = error.response.data.error;
+          } else if (error.request) {
+            this.msg = this.$i18n.t('error_request');
+          } else {
+            this.msg = error.message;
+          }
+          this.msg_class = 'alert';
+        });
+    }
+  }
 };
 </script>
 

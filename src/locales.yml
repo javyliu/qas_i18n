@@ -2,7 +2,7 @@
 en:
   display_name: English
   en: English
-  th: Thailand
+  th: ภาษาไทย
   btn_search: Search
   search_holder: Find an Answer
 
@@ -39,7 +39,7 @@ en:
 
 
 th:
-  display_name: จีน
+  display_name: Thailand
   en: ภาษาอังกฤษ
   th: ภาษาไทย
   btn_search: ค้นหา

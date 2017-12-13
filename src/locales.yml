@@ -10,7 +10,7 @@ en:
   all_qa: All Questions
   submit_ticket: Submit a Ticket
   language: Languages
-  hot_issues: Hot Issues
+  hot_issues: Hot Topics
   menu: Menu
 
   category: CATEGORIES
@@ -19,59 +19,58 @@ en:
   error_request: Request error!
   submit_success: Ticket submit success!
   submit_failed: Ticket submit failed!
-  submit_ticket_title: SUBMIT TICKET
+  submit_ticket_title: Message
   ticket_id: ID
   ticket_email: Email Address
-  ticket_topic: Topic
+  ticket_topic: Category
   ticket_detail: Detail
-  td_des: Use a few words(0~400) to summarize your issue
-  td_promise: Will respond by email within 24 hours
-  ticket_btn: SUBMIT A TICKET
-  ticket_select: Make a Selection
+  td_des: Comment or Question within 400 words
+  td_promise: We promise to respond in 24 hours
+  ticket_btn: SUBMIT
+  ticket_select: Subject
   my_tickets: My Tickets
 
   completed: Completed
   pending: Pending
 
   next_page: Next Page
-  no_question_tip: Your question may not yet have an article in our knowledge center. We encourage you to contact our Support team.
+  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
 
 
 
 th:
   display_name: Thailand
-  en: 英文
-  th: 泰文
-  btn_search: 搜索
-  search_holder: 查找问题
+  en: ภาษาอังกฤษ
+  th: ภาษาไทย
+  btn_search: ค้นหา
+  search_holder: ค้นหาคำถาม
 
-  support_home: 首页
-  all_qa: 所有问题
-  submit_ticket: 提交
-  language: 语言
-  hot_issues: 热门问题
-  menu: 菜单
+  support_home: หน้าแรก
+  all_qa: คำถามทั้งหมด
+  submit_ticket: ส่ง
+  language: ภาษา
+  hot_issues: คำถามยอดฮิต
+  menu: เมนู
 
-  category: 类别
-  c_all: 所有问题
+  category: ประเภท
+  c_all: คำถามทั้งหมด
 
-  error_request: 请求出错!
-  submit_success: 提交问题操作成功!
-  submit_failed: 提交问题操作失败!
-  submit_ticket_title: 提交问题
+  error_request: คำสั่งผิด!
+  submit_success: ส่งสำเร็จ!
+  submit_failed: ส่งไม่สำเร็จ!
+  submit_ticket_title: ส่งคำถาม
   ticket_id: ID
-  ticket_email: 邮箱地址
-  ticket_topic: 类别
-  ticket_detail: 问题描述
-  td_des: 0~400字之间
-  td_promise: 我们将在24小时之内邮件回复
-  ticket_btn: 提交
-  ticket_select: 选择类别
-  my_tickets: 我提交的问题
+  ticket_email: อีเมล
+  ticket_topic: ประเภท
+  ticket_detail: รายละเอียดคำถาม
+  td_des: ระหว่าง0~400ตัวอักษร
+  td_promise: ทางเราจะติดต่อกลับภายใน24ชั่วโมง
+  ticket_btn: ส่ง
+  ticket_select: เลือก
+  my_tickets: คำถามที่ฉันส่ง
 
-  completed: 已完成
-  pending: 处理中
-  next_page: 下一页
-  no_question_tip: 还没有问题，点提交新建一个.
-
+  completed: สำเร็จ
+  pending: กำลังดำเนิน
+  next_page: หน้าถัดไป
+  no_question_tip: ยังไม่มีคำถาม กดส่งเพื่อสร้างใหม่.
 

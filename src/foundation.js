@@ -49,8 +49,8 @@ window.$ = jQuery;
 window.jQuery = jQuery;
 
 // Require non-modular scripts
-require('motion-ui');
-require('what-input');
+// require('motion-ui');
+// require('what-input');
 
 Foundation.addToJquery(jQuery);
 

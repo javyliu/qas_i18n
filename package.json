@@ -18,8 +18,7 @@
     "vue-axios": "^2.0.2",
     "vue-i18n": "^7.3.2",
     "vue-localstorage": "^0.5.0",
-    "vue-router": "^3.0.1",
-    "what-input": "^5.0.3"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

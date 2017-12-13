@@ -41,8 +41,8 @@ export default {
       this.$http
         .get('/en_qas/my_qas', {
           params: {
-            game_id: this.global.game_id,
-            game_role_id: this.global.init_data.id,
+            game_id: this.$localStorage.init_data.game_id,
+            game_role_id: this.$localStorage.init_data.id,
             page: this.current_page
           }
         })

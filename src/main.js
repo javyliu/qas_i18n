@@ -8,8 +8,12 @@ import VueI18n from 'vue-i18n';
 import messages from './locales.yml';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
-
+import VueLocalStorage from 'vue-localstorage';
 import _global from './global_config';
+
+Vue.use(VueLocalStorage, {
+  createComputed: true
+});
 
 Vue.prototype.global = _global;
 Vue.use(VueI18n);
@@ -85,11 +89,23 @@ new Vue({
     // if (this.$route.query.game_id) {
     //   this.global.game_id = this.$route.query.game_id;
     // }
-    this.global.init_data = this.$route.query;
-    this.global.game_id = this.global.init_data.game_id || this.global.game_id;
+    // 由new_ticket传进来的参数初始化数据
+    if (this.$route.name === 'new_ticket' && !this.global.isEmpty(this.$route.query)) {
+      // this.global.init_data = this.$route.query;
+      // this.global.game_id = this.global.init_data.game_id || this.global.game_id;
+      this.$localStorage.init_data = this.$route.query;
+    }
     console.log(this.$i18n.locale);
   },
   mounted: function () {
     console.log('载入成功');
+  },
+  localStorage: {
+    init_data: {
+      type: Object,
+      default: {
+        game_id: 19
+      }
+    }
   }
 });

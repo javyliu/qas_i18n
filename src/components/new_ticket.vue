@@ -90,12 +90,13 @@ export default {
   computed: {
     init_data: function () {
       console.log('调用计算属性');
-      return this.global.init_data;
+      return this.$localStorage.init_data;
     }
   },
   methods: {
     ask () {
       console.log('form is submit');
+
       let data = {
         qa: {
           game_role_id: this.init_data.id,
@@ -103,7 +104,7 @@ export default {
           question: this.question,
           email: this.email
         },
-        game_id: this.global.game_id
+        game_id: this.init_data.game_id
       };
       this.$http
         .post('/en_qas', data)

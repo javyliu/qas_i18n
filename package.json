@@ -1,7 +1,7 @@
 {
   "name": "qas_i18n",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "for multipart qas, if you need release you app, use 'CLI_ENV=release npm run build'",
   "author": "'javy_liu' <'javy_liu@163.com'>",
   "private": true,
   "scripts": {

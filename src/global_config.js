@@ -1,7 +1,6 @@
 import messages from './locales.yml';
-
 export default {
-  BaseUrl: process.env.NODE_ENV === 'production' ? 'http://m.pipgame.com/api/v1/' : 'http://192.168.0.252:7123/api/v1/',
+  BaseUrl: process.env.API_URL,
   game_id: 19,
   getLanguage: function () {
     let langs = Object.keys(messages).join('|');

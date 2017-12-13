@@ -58,6 +58,7 @@
 /*
 http://m.pipgame.com/en_qas/new?id=xxx&name=xxx&p_name=xxx&game_id=xxx
 http://192.168.30.244:8080/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=19&acc_name=xxx&version=0.1.0&lang=en
+http://192.168.0.252:7092/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=19&acc_name=xxx&version=0.1.0&lang=en
 id: 账号id
 name: 角色名
 p_name:分区名

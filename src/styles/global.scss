@@ -33,3 +33,12 @@
 .indent_2em{
   text-indent: 2em;
 }
+
+.pl_1{
+  padding-left:1em;
+}
+.lang_select{
+  border-bottom: dashed 1px #222;
+  label{padding-left: 1em;font-size: 16px;background-color:#666;}
+  a{display: inline-block;}
+}

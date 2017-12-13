@@ -2,6 +2,12 @@
   <div id="app">
     <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
       <ul class="sidebar-menu" data-close="offCanvas">
+        <li class="lang_select">
+          <label>{{$t('language')}}</label>
+          <div class="grid-x grid-padding-x small-up-2">
+            <a href="#" v-for="(lan, index) in languages" :key="index" @click.prevent="change_language(lan[0])" :class="{active: $i18n.locale === lan[0]}">{{lan[1]}}</a>
+          </div>
+        </li>
         <li>
           <router-link to="/" exact>{{$t('support_home')}}</router-link>
         </li>
@@ -29,18 +35,6 @@
           <ul class="menu toggle_menu">
             <li>
               <a class="button secondary menu-button  small" data-toggle="offCanvas">{{$t('menu')}}</a>
-            </li>
-            <li>
-              <ul class="dropdown menu" data-dropdown-menu data-close-on-click="true">
-                <li>
-                  <a href="#">{{$t('language')}}</a>
-                  <ul class="menu vertical">
-                    <li v-for="(lan, index) in languages" :key="index">
-                      <a href="#" @click="change_language(lan[0])">{{lan[1]}}</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -88,7 +82,7 @@ export default {
   computed: {
     languages: function () {
       return Object.keys(this.$i18n.messages).map(function (item) {
-        return [item, this.$t('display_name', item)];
+        return [item, this.$t(item)];
       }, this);
     }
   }
@@ -140,14 +134,10 @@ a:focus {
 .dropdown.menu {
   li.is-active {
     a {
-      color: #ccc;
     }
   }
-  a {
-    color: #fff;
-  }
+
   .menu li {
-    color: #fff;
     font-size: 14px;
   }
 }

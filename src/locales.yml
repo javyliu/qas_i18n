@@ -1,6 +1,8 @@
 
 en:
   display_name: English
+  en: English
+  th: Thailand
   btn_search: Search
   search_holder: Find an Answer
 
@@ -32,13 +34,14 @@ en:
   pending: Pending
 
   next_page: Next Page
+  no_question_tip: Your question may not yet have an article in our knowledge center. We encourage you to contact our Support team.
 
 
-  hello: 'hello world {name}'
-  apple: 'no apples | one apple | {count} apples'
 
 th:
-  display_name: 'Thailand'
+  display_name: Thailand
+  en: 英文
+  th: 泰文
   btn_search: 搜索
   search_holder: 查找问题
 
@@ -69,4 +72,6 @@ th:
   completed: 已完成
   pending: 处理中
   next_page: 下一页
+  no_question_tip: 还没有问题，点提交新建一个.
+
 

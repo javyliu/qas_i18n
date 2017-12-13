@@ -1,7 +1,7 @@
 <template>
   <div class="grid-x">
     <div class="cell">
-      <ul class="common_qas">
+      <ul class="common_qas" v-if="common_qas && common_qas.length > 0">
         <li v-for="(item,index) in common_qas" :key="item.id">
           <p class="title">
             <span class="primary badge">{{index + 1}}</span>
@@ -12,6 +12,10 @@
           <hr>
         </li>
       </ul>
+      <div class="callout warning mt_8" v-else>
+        <p>{{$t('no_question_tip')}}</p>
+        <router-link to="/new_ticket" class="button expanded">{{$t('submit_ticket')}}</router-link>
+      </div>
     </div>
   </div>
 </template>

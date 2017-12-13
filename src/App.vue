@@ -40,7 +40,9 @@
         </div>
       </div>
       <div class="grid-container pt">
-        <router-view></router-view>
+        <transition name="fade" mode="out-in">
+          <router-view></router-view>
+        </transition>
       </div>
     </div>
   </div>

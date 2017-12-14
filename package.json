@@ -9,8 +9,8 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "deploy": "gulp deploy_to_web", //布署到正式服
-    "deploy_test": "gulp deploy_to_252" //布署到测试服252
+    "deploy": "gulp deploy_to_web",
+    "deploy_test": "gulp deploy_to_252"
   },
   "dependencies": {
     "axios": "^0.17.1",

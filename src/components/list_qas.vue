@@ -41,7 +41,7 @@ export default {
       this.$http
         .get('/en_qas/list', {
           params: {
-            game_id: this.global.game_id,
+            game_id: this.$localStorage.init_data.game_id,
             cate_id: cateId === 'all' ? null : cateId,
             query: query
           }

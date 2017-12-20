@@ -90,7 +90,7 @@ new Vue({
     //   this.global.game_id = this.$route.query.game_id;
     // }
     // 由new_ticket传进来的参数初始化数据
-    if (this.$route.name === 'new_ticket' && !this.global.isEmpty(this.$route.query)) {
+    if ((this.$route.name === 'new_ticket' || this.$route.name === 'home') && !this.global.isEmpty(this.$route.query)) {
       // this.global.init_data = this.$route.query;
       // this.global.game_id = this.global.init_data.game_id || this.global.game_id;
       this.$localStorage.init_data = this.$route.query;

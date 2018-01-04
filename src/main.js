@@ -5,7 +5,7 @@ import './foundation';
 import App from './App';
 import router from './router';
 import VueI18n from 'vue-i18n';
-import messages from './locales.yml';
+import messages from './locales/qas_locales.yml';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueLocalStorage from 'vue-localstorage';
@@ -19,7 +19,7 @@ Vue.prototype.global = _global;
 Vue.use(VueI18n);
 
 const i18n = new VueI18n({
-  locale: _global.getLanguage(), // set locale
+  locale: _global.getLanguage(messages), // set locale
   fallbackLocale: 'en',
   missing: (locale, key, vm) => {
     console.log(`${locale} 中 ${key} 不存在`);

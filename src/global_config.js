@@ -1,8 +1,8 @@
-import messages from './locales.yml';
+// import messages from './locales.yml';
 export default {
   BaseUrl: process.env.API_URL,
   game_id: 19,
-  getLanguage: function () {
+  getLanguage: function (messages) {
     let langs = Object.keys(messages).join('|');
     let reg = new RegExp(`lang=(${langs})`);
     let mc = location.href.match(reg);

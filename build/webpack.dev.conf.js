@@ -29,12 +29,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     host: HOST || config.dev.host,
     port: PORT || config.dev.port,
     open: config.dev.autoOpenBrowser,
-    overlay: config.dev.errorOverlay
-      ? { warnings: false, errors: true }
-      : false,
+    overlay: config.dev.errorOverlay ? { warnings: false, errors: true } : false,
     publicPath: config.dev.assetsPublicPath,
     proxy: config.dev.proxyTable,
     quiet: true, // necessary for FriendlyErrorsPlugin
+    // index: 'index.html',
     watchOptions: {
       poll: config.dev.poll,
     }
@@ -50,7 +49,17 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      //inject: true
+      excludeChunks: ['rsh/app'],
+
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'rsh.html',
+      template: 'index_research.html',
+      //inject: true
+      // excludeChunks: ['rsh/app'],
+      excludeChunks: ['app'],
+
     }),
   ]
 })

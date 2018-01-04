@@ -70,18 +70,20 @@ exports.cssLoaders = function (options) {
 }
 
 // Generate loaders for standalone style files (outside of .vue)
+var test_i = 0;
 exports.styleLoaders = function (options) {
   const output = []
   const loaders = exports.cssLoaders(options)
-
   for (const extension in loaders) {
-    const loader = loaders[extension]
+    const loader = loaders[extension];
+
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader
-    })
+    });
   }
 
+  // console.dir(output);
   return output
 }
 

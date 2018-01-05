@@ -23,7 +23,11 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   // these devServer options should be customized in /config/index.js
   devServer: {
     clientLogLevel: 'warning',
-    historyApiFallback: true,
+    historyApiFallback: {
+      rewrites: [
+        { from: /^\/rsh/, to: '/rsh/index.html' }
+      ]
+    },
     hot: true,
     compress: true,
     host: HOST || config.dev.host,
@@ -32,7 +36,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     overlay: config.dev.errorOverlay ? { warnings: false, errors: true } : false,
     publicPath: config.dev.assetsPublicPath,
     proxy: config.dev.proxyTable,
-    quiet: true, // necessary for FriendlyErrorsPlugin
+    // quiet: true, // necessary for FriendlyErrorsPlugin
     // index: 'index.html',
     watchOptions: {
       poll: config.dev.poll,
@@ -51,10 +55,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       template: 'index.html',
       //inject: true
       excludeChunks: ['rsh/app'],
-
     }),
     new HtmlWebpackPlugin({
-      filename: 'rsh.html',
+      filename: 'rsh/index.html',
       template: 'index_research.html',
       //inject: true
       // excludeChunks: ['rsh/app'],

@@ -1,5 +1,11 @@
 @include foundation-everything(true);
 // @import '~motion-ui/dist/motion-ui';
+.pr{
+  position:relative;
+}
+.pa{
+  position: absolute;
+}
 .mt_8{
   margin-top:8px;
 }

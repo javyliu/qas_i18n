@@ -6,10 +6,12 @@ import App from '@/components/rsh/App';
 import router from '../router/rsh_router';
 import VueI18n from 'vue-i18n';
 import messages from '../locales/rsh_locales.yml';
+import questions from '../locales/questions/qa_1.yml';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 // import VueLocalStorage from 'vue-localstorage';
 import _global from '../global_config';
+const merge = require('webpack-merge');
 
 // Vue.use(VueLocalStorage, {
 //   createComputed: true
@@ -21,10 +23,10 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: _global.getLanguage(messages), // set locale
   fallbackLocale: 'en',
+  messages: merge(messages, questions), // set locale messages
   missing: (locale, key, vm) => {
     console.log(`${locale} 中 ${key} 不存在`);
-  },
-  messages // set locale messages
+  }
 });
 
 axios.defaults.baseURL = _global.BaseUrl;

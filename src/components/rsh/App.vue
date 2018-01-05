@@ -23,7 +23,7 @@
       </ul>
     </div>
     <div class="off-canvas-content grid-container full" data-off-canvas-content>
-      <div class="top-bar grid-x">
+      <!-- div class="top-bar grid-x">
         <div class="cell small-6 shrink">
           <ul class="menu">
             <li class="logo">
@@ -38,8 +38,10 @@
             </li>
           </ul>
         </div>
-      </div>
+      </div -->
       <div class="grid-container pt">
+        <h4 class="title text-center">{{$t('vote_title')}}</h4>
+        <p>{{$t('rsh_des')}}</p>
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>

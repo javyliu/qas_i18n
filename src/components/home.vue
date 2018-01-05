@@ -16,7 +16,6 @@
             </li>
           </ul>
         </fieldset>
-        </ul>
       </div>
     </div>
   </div>

@@ -35,6 +35,13 @@ en:
 
   next_page: Next Page
   no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  voted: 已经投过票了！
+  net_error: 网络错误！
+  err: Error
+  err_rsh_require: 请填写后再提交！
+  success_rsh: 投票提交成功！
+  rsh_not_selected: 第{count}题未选择
+
 
   prev_title: 上一题
   next_title: 下一题
@@ -81,6 +88,14 @@ th:
   pending: กำลังดำเนิน
   next_page: หน้าถัดไป
   no_question_tip: ยังไม่มีคำถาม กดส่งเพื่อสร้างใหม่.
+
+  voted: 已经投过票了！
+  net_error: 网络错误！
+  err_rsh_require: 请填写后再提交！
+  success_rsh: 投票提交成功！
+  rsh_not_selected: 第{count}题未选择
+
+
   prev_title: 上一题
   next_title: 下一题
 

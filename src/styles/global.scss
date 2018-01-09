@@ -61,3 +61,9 @@
   opacity:0;
   transition:opacity .1s;
 }
+
+.reveal,
+.is-reveal-open,
+.reveal-overlay {
+  overflow: hidden !important;
+}

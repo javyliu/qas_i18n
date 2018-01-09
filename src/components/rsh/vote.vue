@@ -129,7 +129,6 @@ export default {
       return notSelectedKeys;
     },
     onClose() {
-      console.log(this);
       this.global.rsh_values = {};
       this.show_btn = false;
       this.width = 0;

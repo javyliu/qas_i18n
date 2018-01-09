@@ -109,7 +109,8 @@ new Vue({
       default: {
         game_id: 19,
         rsh_id: 1,
-        game_name: 'guest'
+        name: 'guest',
+        lang: 'en'
       }
     }
   }

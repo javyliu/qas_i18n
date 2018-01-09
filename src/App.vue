@@ -52,7 +52,7 @@
 export default {
   name: 'app',
   // props: ['ccn'],
-  mounted () {
+  mounted() {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
     this.select_lan = new Foundation.DropdownMenu($('.dropdown'), {
       disableHover: true,
@@ -61,7 +61,7 @@ export default {
     });
   },
   methods: {
-    change_language: function (curLan) {
+    change_language: function(curLan) {
       if (this.$i18n.locale === curLan) {
         return;
       }
@@ -82,8 +82,8 @@ export default {
     }
   },
   computed: {
-    languages: function () {
-      return Object.keys(this.$i18n.messages).map(function (item) {
+    languages: function() {
+      return Object.keys(this.$i18n.messages).map(function(item) {
         return [item, this.$t(item)];
       }, this);
     }
@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./styles/global";
+@import './styles/global';
 
 // Chrome Reset
 a:focus {

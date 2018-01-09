@@ -7,6 +7,7 @@ import Vote from '@/components/rsh/vote';
 // import MyTickets from '@/components/my_tickets';
 
 Vue.use(Router);
+
 // console.log($vm);
 export default new Router({
   mode: 'history',

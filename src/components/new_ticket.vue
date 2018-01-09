@@ -72,7 +72,7 @@ lang：语言
 */
 export default {
   name: 'new_ticket',
-  data () {
+  data() {
     return {
       email: null,
       qa_cate_id: '',
@@ -82,21 +82,21 @@ export default {
       msg_class: 'hide'
     };
   },
-  created () {
+  created() {
     this.global.getUserCates().then(
-      function (res) {
+      function(res) {
         this.user_cates = res;
       }.bind(this)
     );
   },
   computed: {
-    init_data: function () {
+    init_data: function() {
       console.log('调用计算属性');
       return this.$localStorage.init_data;
     }
   },
   methods: {
-    ask () {
+    ask() {
       console.log('form is submit');
 
       let data = {

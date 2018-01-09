@@ -35,20 +35,20 @@ axios.interceptors.request.use((config) => {
     config.url += ((config.url.indexOf('?') === -1 ? '?' : '&') + 'locale=' + i18n.locale);
   }
   return config;
-}, function (error) {
+}, function(error) {
   return Promise.reject(error);
 });
 
 // get cates
 
-_global.getCommonCates = function () {
-  return new Promise(function (resolve, reject) {
+_global.getCommonCates = function() {
+  return new Promise(function(resolve, reject) {
     if (_global.common_cates) {
       console.log('common_cates 存在');
       resolve(_global.common_cates);
     } else {
       console.log('common_cates 不存在');
-      axios.get('en_qas/common_cates').then(function (res) {
+      axios.get('en_qas/common_cates').then(function(res) {
         console.log('common_cates 返回');
         _global.common_cates = res.data;
         resolve(res.data);
@@ -57,14 +57,14 @@ _global.getCommonCates = function () {
   });
 };
 
-_global.getUserCates = function () {
-  return new Promise(function (resolve, reject) {
+_global.getUserCates = function() {
+  return new Promise(function(resolve, reject) {
     if (_global.user_cates) {
       console.log('user_cates 存在');
       resolve(_global.user_cates);
     } else {
       console.log('user_cates 不存在');
-      axios.get('en_qas/user_cates').then(function (res) {
+      axios.get('en_qas/user_cates').then(function(res) {
         console.log('user_cates 返回');
         _global.user_cates = res.data;
         resolve(res.data);
@@ -84,7 +84,7 @@ new Vue({
   router,
   template: '<App></App>',
   components: { App },
-  created: function () {
+  created: function() {
     console.log('app 创建 成功,获取类别数据');
     // if (this.$route.query.game_id) {
     //   this.global.game_id = this.$route.query.game_id;
@@ -97,7 +97,7 @@ new Vue({
     }
     console.log(this.$i18n.locale);
   },
-  mounted: function () {
+  mounted: function() {
     console.log('载入成功');
   },
   localStorage: {

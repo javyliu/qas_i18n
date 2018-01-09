@@ -10,7 +10,7 @@
 <script>
 export default {
   name: 'search',
-  data () {
+  data() {
     return {
       keyword: this.$route.query.keyword
     };
@@ -19,14 +19,14 @@ export default {
     $route: 'set_keyword'
   },
   methods: {
-    query_common_qas () {
+    query_common_qas() {
       this.$router.push({
         name: 'list_qas',
         params: { cate_id: 'all' },
         query: { keyword: this.keyword }
       });
     },
-    set_keyword () {
+    set_keyword() {
       this.keyword = this.$route.query.keyword;
     }
   }

@@ -26,7 +26,7 @@ import Search from '@/components/search';
 
 export default {
   name: 'home',
-  data () {
+  data() {
     return {
       common_cates: null,
       loading: true
@@ -35,11 +35,11 @@ export default {
   watch: {
     $route: 'getData'
   },
-  created () {
+  created() {
     this.getData();
   },
   methods: {
-    getData () {
+    getData() {
       console.log('watch common cates');
       this.global.getCommonCates().then(res => {
         this.common_cates = res;

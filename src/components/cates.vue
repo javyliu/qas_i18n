@@ -23,14 +23,14 @@ import Search from '@/components/search';
 
 export default {
   name: 'cates',
-  data () {
+  data() {
     return {
       common_cates: null
     };
   },
-  created () {
+  created() {
     this.global.getCommonCates().then(
-      function (res) {
+      function(res) {
         this.common_cates = res;
       }.bind(this)
     );

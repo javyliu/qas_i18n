@@ -38,7 +38,7 @@ en:
 
   prev_title: 上一题
   next_title: 下一题
-
+  submit: 提交
   rsh_types:
     name: 问题类别
     types:
@@ -84,6 +84,7 @@ th:
   prev_title: 上一题
   next_title: 下一题
 
+  submit: 提交
   rsh_types:
     name: 问题类别
     types:

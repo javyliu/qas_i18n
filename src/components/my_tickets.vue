@@ -26,18 +26,18 @@
 <script>
 export default {
   name: 'list_qas',
-  data () {
+  data() {
     return {
       qas: [],
       last_index: 0,
       current_page: 1
     };
   },
-  created () {
+  created() {
     this.list();
   },
   methods: {
-    list () {
+    list() {
       this.$http
         .get('/en_qas/my_qas', {
           params: {

@@ -23,21 +23,21 @@
 <script>
 export default {
   name: 'list_qas',
-  data () {
+  data() {
     return {
       common_qas: null
     };
   },
-  created () {
+  created() {
     this.list(this.$route.params.cate_id, this.$route.query.keyword);
   },
-  beforeRouteUpdate (to, from, next) {
+  beforeRouteUpdate(to, from, next) {
     this.list(to.params.cate_id, to.query.keyword);
     next();
   },
 
   methods: {
-    list (cateId, query = null) {
+    list(cateId, query = null) {
       this.$http
         .get('/en_qas/list', {
           params: {
@@ -47,7 +47,7 @@ export default {
           }
         })
         .then(
-          function (res) {
+          function(res) {
             this.common_qas = res.data;
           }.bind(this)
         );

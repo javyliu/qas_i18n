@@ -2,7 +2,7 @@
 export default {
   BaseUrl: process.env.API_URL,
   game_id: 19,
-  getLanguage: function (messages) {
+  getLanguage: function(messages) {
     let langs = Object.keys(messages).join('|');
     let reg = new RegExp(`lang=(${langs})`);
     let mc = location.href.match(reg);
@@ -19,7 +19,7 @@ export default {
       }
     }
   },
-  isEmpty: function (obj) {
+  isEmpty: function(obj) {
     for (var prop in obj) {
       if (obj.hasOwnProperty(prop)) { return false; }
     }

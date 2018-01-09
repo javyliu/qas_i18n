@@ -40,8 +40,8 @@
         </div>
       </div -->
       <div class="grid-container pt">
-        <h4 class="title text-center">{{$t('vote_title')}}</h4>
-        <p>{{$t('rsh_des')}}</p>
+        <h4 class="title text-center">{{rsh.vote_title}}</h4>
+        <p>{{rsh.rsh_des}}</p>
         <transition name="fade" mode="out-in">
           <router-view></router-view>
         </transition>
@@ -54,7 +54,7 @@
 export default {
   name: 'app',
   // props: ['ccn'],
-  mounted () {
+  mounted() {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
     this.select_lan = new Foundation.DropdownMenu($('.dropdown'), {
       disableHover: true,
@@ -63,7 +63,7 @@ export default {
     });
   },
   methods: {
-    change_language: function (curLan) {
+    change_language: function(curLan) {
       if (this.$i18n.locale === curLan) {
         return;
       }
@@ -84,17 +84,21 @@ export default {
     }
   },
   computed: {
-    languages: function () {
-      return Object.keys(this.$i18n.messages).map(function (item) {
+    languages: function() {
+      return Object.keys(this.$i18n.messages).map(function(item) {
         return [item, this.$t(item)];
       }, this);
+    },
+    rsh: function() {
+      console.log('=====计算属性');
+      return this.$t('rshs')[this.$localStorage.rsh_data.rsh_id - 1];
     }
   }
 };
 </script>
 
 <style lang="scss">
-@import "../../styles/global";
+@import '../../styles/global';
 
 // Chrome Reset
 a:focus {

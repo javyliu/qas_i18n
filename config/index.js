@@ -53,6 +53,7 @@ module.exports = {
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
     rsh: path.resolve(__dirname, '../dist/rsh/index.html'),
+    news: path.resolve(__dirname, '../dist/news/index.html'),
 
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),

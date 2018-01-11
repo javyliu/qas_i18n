@@ -62,7 +62,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: config.build.index,
       template: 'index.html',
       // chunks: ['app', 'manifest', 'vendor'],
-      excludeChunks: ['rsh/app'],
+      excludeChunks: ['rsh/app', 'news/app'],
       // inject: true,
       minify: {
         removeComments: true,
@@ -78,7 +78,22 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: config.build.rsh,
       template: 'index_research.html',
       // chunks: ['rsh/app'],
-      excludeChunks: ['app'],
+      excludeChunks: ['app', 'news/app'],
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        removeAttributeQuotes: true
+        // more options:
+        // https://github.com/kangax/html-minifier#options-quick-reference
+      },
+      // necessary to consistently work with multiple chunks via CommonsChunkPlugin
+      chunksSortMode: 'dependency'
+    }),
+    new HtmlWebpackPlugin({
+      filename: config.build.news,
+      template: 'index_research.html',
+      // chunks: ['rsh/app'],
+      excludeChunks: ['app', 'rsh/app'],
       minify: {
         removeComments: true,
         collapseWhitespace: true,

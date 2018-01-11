@@ -25,7 +25,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     clientLogLevel: 'warning',
     historyApiFallback: {
       rewrites: [
-        { from: /^\/rsh/, to: '/rsh/index.html' }
+        { from: /^\/rsh/, to: '/rsh/index.html' },
+        { from: /^\/news/, to: '/news/index.html' },
       ]
     },
     hot: true,
@@ -54,14 +55,22 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       filename: 'index.html',
       template: 'index.html',
       //inject: true
-      excludeChunks: ['rsh/app'],
+      excludeChunks: ['rsh/app', 'news/app'],
     }),
     new HtmlWebpackPlugin({
       filename: 'rsh/index.html',
       template: 'index_research.html',
       //inject: true
       // excludeChunks: ['rsh/app'],
-      excludeChunks: ['app'],
+      excludeChunks: ['app', 'news/app'],
+
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'news/index.html',
+      template: 'index_research.html',
+      //inject: true
+      // excludeChunks: ['rsh/app'],
+      excludeChunks: ['app', 'rsh/app'],
 
     }),
   ]

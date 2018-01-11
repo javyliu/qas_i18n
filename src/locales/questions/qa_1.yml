@@ -1,4 +1,4 @@
-en:
+zh:
   rshs:
     - rsh_id: "1"
       vote_title: 游戏调查
@@ -19,7 +19,7 @@ en:
         - title:  3.你最高的教育程度是
           type: 0
           selects:
-            - A.中学以下
+            - A.中学
             - B.大学                
             - C.硕士及以上
         - title:  4.你目前的职业是？
@@ -42,38 +42,33 @@ en:
         - title:  5.你对什么类型的游戏感兴趣？【可选择多项】
           type: 1
           selects:
-            - A.角色扮演类（Star Wars、The Walking Dead、Angry Birds Evolution）
-            - B.模拟经营类（Hay Day、Farm Ville）
-            - C.动作类（Marvel Contest of Champions、War Robots）
-            - D.棋牌类（World Series of Poker、Amazing Pocket）
-            - E.探险类（Pokemon GO、ROBLOX）
-            - F.策略类（Clash of Kings、Mobile Strike）
+            - A.角色扮演类（星际战争、行尸走肉、愤怒的小鸟）
+            - B.模拟经营类（开心农场）
+            - C.动作类（街头篮球、街头争霸、魂斗罗）
+            - D.棋牌类（斗地主、麻将）
+            - E.探险类（Pokemon GO）
+            - F.策略类（列王的纷争、王国纪元）
             - G.射击类
             - [H.其他类,2]
         - title: 6.你最近玩过以下哪些策略类游戏？（可多选）
           type: 1
           selects:
-            - A.Ark of War - AOW
-            - B.Army Men Strike
-            - C.Boom Beach
-            - D.Castle Clash
-            - E.Clash of Clans
-            - F.Clash of Kings
-            - G.Clash Royale
-            - H.Final Fantasy XV: A New Empire
-            - I.Forge of Empires
-            - J.Game of Thrones: Conquest™
+            - A.列王的纷争
+            - B.War Z
+            - C.阿瓦隆之战
+            - D.战地风暴
+            - E.王国纪元
+            - F.战火与秩序
+            - G.Mobile Strike
+            - H.绝园少女
+            - I.战地指挥官
+            - J.战争与魔法
             - K.Game of War
-            - L.Guns of Glory
-            - M.Invasion
-            - N.King of Avalon
-            - O.Lords Mobile
-            - P.Mobile Strike
-            - Q.Vikings: War of Clans
-            - R.War and Order
-            - S.War Dragons
-            - T.War Z
-            - U.NA
+            - L.二战风云
+            - M.World Warfare
+            - N.魔灵召唤
+            - O.皇室战争
+            - [I.其他,2]
         - title:  7.哪一类题材的游戏最吸引你？【可选择多项】
           type: 1
           selects:
@@ -97,33 +92,33 @@ en:
         - title: 9.你目前的年收入（税前）
           type: 0
           selects:
-            - A.$20000以下            
-            - B.$20001-50000
-            - C.$50001-100000             
-            - D.$100000以上
+            - A.￥50000以下            
+            - B.￥50001-100000
+            - C.￥100001-500000             
+            - D.￥5000000以上
         - title: 10你每月在游戏上的花费有多少金额？
           type: 0
           selects:
             - A.无付费
-            - B.$1-100元
-            - C.$11-500元
-            - D.$501-1000元
-            - E.$1000以上
+            - B.￥1-100元
+            - C.￥101-500元
+            - D.￥501-1000元
+            - E.￥1000以上
         - title: 11.你为一款游戏最多累计付费过多少金额？
           type: 0
           selects:
             - A.无付费
-            - B.$1-30元
-            - C.$31-100元
-            - D.$101-1000元
-            - E.$1000以上
+            - B.￥1-100元
+            - C.￥101-1000元
+            - D.￥1001-5000元
+            - E.￥5000以上
         - title: 12.你主要通过什么途径知道一款新游戏呢？（可选择多项）
           type: 1
           selects:
-            - A.社交媒体广告（Facebook、Youtube、Twitter）
-            - B.日常app广告（？？？？？）
+            - A.社交媒体广告（微信、qq、微博等）
+            - B.日常app广告（下载的app中助推的广告）
             - C.游戏里的广告（如一些游戏内的嵌入链接广告）
-            - D.自媒体（Facebook大号推广）
+            - D.自媒体（微信公众号推广）
             - E.户外广告（电梯广告、地铁广告、院线广告）
             - F.电视广告（电视台的广告）
             - G.应用商店（Appstore排行榜）
@@ -136,14 +131,166 @@ en:
             - B.4分喜欢
             - C.3分一般喜欢
             - D.2分以下不喜欢
-        - title: 14.你愿意把War Mobile这款游戏推荐给朋友？
+        - title: 14.你愿意把Wars Mobile这款游戏推荐给朋友？
           type: 0
           selects:
             - A.5分非常愿意
             - B.4分愿意
             - C.3分看机会
             - D.2分以下不愿意
-        - title: 15.以下三条游戏slogan，你更喜欢哪个？如果都不喜欢，请选择其他，并为我们创意一条slogan，如果你创意的slogan获得采纳，将会给您丰富的游戏内奖励。
+        - title: 15.以下三条游戏副标题，你更喜欢哪个？如果都不喜欢，请选择其他，并为我们创意一条副标题，如果你创意的副标题获得采纳，将会给您丰富的游戏内奖励。
+          type: 0
+          selects:
+            - A.时势造英雄!
+            - B.生而为战!
+            - C.生存与毁灭!
+            - ['D.其他:',2]
+en:
+  rshs:
+    - rsh_id: "1"
+      vote_title: Questionnaire
+      rsh_des: Your information will be greatly valued and of course will be strictly confidential. Taking a few minutes to get a gift in game !
+      questions:
+        - title: 1.What is your gender?
+          type: 0
+          selects:
+            - A.Male
+            - B.Female
+        - title: 2.How old are you?
+          type: 0
+          selects:
+            - A.Under 18
+            - B.18-30
+            - C.31-45
+            - D.Above 45
+        - title:  3.What is your educational status?
+          type: 0
+          selects:
+            - A.Secondary education
+            - B.Bachelor degree             
+            - C.Master degree or above
+        - title:  4.Your occupation belongs to 
+          type: 0
+          selects:
+            - A.IT
+            - B.Finance
+            - C.Commerce
+            - D.Medical
+            - E.Media
+            - F.Realty
+            - G.Education
+            - H.Service
+            - I.Logistics
+            - J.Energy Sector
+            - K.Government/Nonprofit Institutions
+            - L.Student
+            - M.Unemployed
+            - [N.Others,2]
+        - title:  5.What kinds of games do you like? (Multiselect)
+          type: 1
+          selects:
+            - A.RPG（Star Wars、The Walking Dead、Angry Birds Evolution）
+            - B.Simulation Games（Hay Day、Farm Ville）
+            - C.Action Games（Marvel Contest of Champions、War Robots）
+            - D.Card Games（World Series of Poker、Amazing Pocket）
+            - E.Adventure Games（Pokemon GO、ROBLOX）
+            - F.SLG（Clash of Kings、Mobile Strike）
+            - G.FPS/TPS
+            - [H.Others,2]
+        - title: 6.Which of the following SLG have you played recently? (Multiselect)
+          type: 1
+          selects:
+            - A.Ark of War - AOW
+            - B.Army Men Strike
+            - C.Boom Beach
+            - D.Castle Clash
+            - E.Clash of Clans
+            - F.Clash of Kings
+            - G.Clash Royale
+            - H.Final Fantasy XV: A New Empire
+            - I.Forge of Empires
+            - J.Game of Thrones: Conquest™
+            - K.Game of War
+            - L.Guns of Glory
+            - M.Invasion
+            - N.King of Avalon
+            - O.Lords Mobile
+            - P.Mobile Strike
+            - Q.Vikings: War of Clans
+            - R.War and Order
+            - S.War Dragons
+            - T.War Z
+            - U.NA
+        - title:  7.What types of games are the most attractive to you?
+          type: 1
+          selects:
+            - A.History and War（Middle age, World War II,etc）
+            - B.Star War
+            - C.Modern Commerce
+            - D.Western Fantasy（The mythology of ancient Greece, ancient Rome, northern Europe, Egypt,etc）
+            - E.Oriental Mythology（The mythology of China, Japan,etc）
+            - F.Sports Management
+            - G.Simulation of Operation
+            - H.Gangster and Crime
+            - [I.Others,2]
+        - title: 8.How much time do you spend on playing Mobile game every day? 
+          type: 0
+          selects:
+            - A.Less than 1 hour
+            - B.0.5-1 hour
+            - C.1-2 hours
+            - D.2-3 hours
+            - E.More than 3 hours
+        - title: 9.What's your current annual income? 
+          type: 0
+          selects:
+            - A.Less than $20000            
+            - B.$20001-$50000
+            - C.$50001-$100000             
+            - D.More than $100000
+        - title: 10.How much do you spend on the games every month?
+          type: 0
+          selects:
+            - A.None
+            - B.$1-$100
+            - C.$11-$500
+            - D.$501-$1000
+            - E.More than $1000
+        - title: 11.How much do you pay for ONE game at most?
+          type: 0
+          selects:
+            - A.None
+            - B.$1-$30
+            - C.$31-$100
+            - D.$101-$1000
+            - E.More than $1000
+        - title: 12.What's the main way for you to know a new game?（Multiselect）
+          type: 1
+          selects:
+            - A.Social media ads（Facebook、Youtube、Twitter）
+            - B.In-app ads
+            - C.In-game ads
+            - D.We media
+            - E.Outdoor ads
+            - F.TV ads
+            - G.Appstore（Appstore Ranking）
+            - H.Friends introduction
+            - [I.Others,2]
+        - title: 13.Do you like the graphics of Wars Mobile?
+          type: 0
+          selects:
+            - A.Very like
+            - B.Like 
+            - C.Dislike
+            - D.Very dislike
+        - title: 14.Would you like to recommend the Wars Mobile friends?
+          type: 0
+          selects:
+            - A.Very like
+            - B.Like 
+            - C.Dislike
+            - D.Very dislike
+        - title: 15.Which one is your favourite slogan of Wars Mobile? You can choose "others" and give us your creative idea to win the grand award!
           type: 0
           selects:
             - A.War makes hero!
@@ -153,56 +300,56 @@ en:
 th:
   rshs:
     - rsh_id: '1'
-      vote_title: 游戏调查
-      rsh_des: Wars Mobile团队承诺，问卷所有内容均会保密，仅作为统计使用，感谢您的配合与支持！在您提交问卷后，请领取为您准备的奖励，祝您游戏愉快！
+      vote_title: แบบสอบถามเกี่ยวกับเกม
+      rsh_des: ทีมWars Mobileขอสัญญาว่า เนื้อหาภายในแบบสอบถามจะเป็นความลับ เราจะใช้เพื่อทำสถิติเท่านั้น ขอขอบคุณสำหรับความร่วมมือ!หลังจากที่คุณได้ส่งแบบสอบถามแล้ว กรุณาไปรับรางวัลที่ทางเราได้เตรียมไว้ให้ ขอให้สนุกกับการเล่นเกม!
       questions:
-        - title: 1.你的性别
+        - title: 1.เพศ
           type: 0
           selects:
-            - A.男
-            - B.女
-        - title: 2.你的年龄
+            - A.ชาย
+            - B.หญิง
+        - title: 2.อายุ
           type: 0
           selects:
-            - A.18岁以下
-            - B.18-30
-            - C.31-45
-            - D.45以上
-        - title:  3.你最高的教育程度是
+            - A.ต่ำว่า18ปี
+            - B.18-30ปี
+            - C.31-45ปี
+            - D.มากกว่า45ปี
+        - title:  3.การศึกษาสูงสุดคือ
           type: 0
           selects:
-            - A.中学以下
-            - B.大学                
-            - C.硕士及以上
-        - title:  4.你目前的职业是？？？
+            - A.ต่ำกว่ามัธยมต้น
+            - B.มหาวิทยาลัย           
+            - C.ปริญญาโทขึ้นไป
+        - title:  4.อาชีพปัจจุบันคือ?
           type: 0
           selects:
-            - A.计算机/互联网/通信/电子
-            - B.会计/金融/银行/保险
-            - C.贸易/消费/制造/营运
-            - D.制药/医学
-            - E.广告/媒体
-            - F.房地产/建筑
-            - G.专业服务/教育/培训
-            - H.服务业
-            - I.物流/运输
-            - J.能源/原材料
-            - K.政府/非营利机构
-            - L.学生
-            - M.待业
-            - [N.其他,2]
-        - title:  5.你对什么类型的游戏感兴趣？【可选择多项】
+            - A.คอมพิวเตอร์และไอที
+            - B.บัญชีธนาคารและประกัน
+            - C.ธุรกิจค้าขายและการตลาด
+            - D.ยาและการแพทย์
+            - E.การโฆษณาและมีเดีย
+            - F.อสังหาริมทรัพย์
+            - G.การศึกษาและการอบรบ
+            - H.งานบริการ
+            - I.การขนส่ง
+            - J.พลังงานและวัตถุดิบ
+            - K.ข้าราชการและองค์กงที่ไม่แสวงหากำไร
+            - L.นักเรียน
+            - M.ว่างงาน
+            - [N.อื่นๆ  ,2]                      
+        - title:  5.คุณชื่อชอบเกมประเภทไหน?【เลือกได้หลายข้อ】
           type: 1
           selects:
-            - A.角色扮演类（Star Wars、The Walking Dead、Angry Birds Evolution）
-            - B.模拟经营类（Hay Day、Farm Ville）
-            - C.动作类（Marvel Contest of Champions、War Robots）
-            - D.棋牌类（World Series of Poker、Amazing Pocket）
-            - E.探险类（Pokemon GO、ROBLOX）
-            - F.策略类（Clash of Kings、Mobile Strike）
-            - G.射击类
-            - [H.其他类,2]
-        - title: 6.你最近玩过以下哪些策略类游戏？（可多选）
+            - A.ประเภทRPG（Star Wars、The Walking Dead、Angry Birds Evolution）
+            - B.ประเภทเลียนแบบหรือจำลอง（Hay Day、Farm Ville）
+            - C.ประเภทแอคชั่น（Marvel Contest of Champions、War Robots）
+            - D.ประเภทไพ่และการ์ด（World Series of Poker、Amazing Pocket）
+            - E.ประเภทผจญภัย（Pokemon GO、ROBLOX）
+            - F.ประเภทวางแผน（Clash of Kings、Mobile Strike）
+            - G.ประเภทต่อสู้
+            - H.[H.ประเภทอื่นๆ,2]
+        - title: 6.ช่วงนี้คุณเล่นเกมประเภทวางแผนอะไรบ้าง?(เลือกได้หลายข้อ)
           type: 1
           selects:
             - A.Ark of War - AOW
@@ -225,77 +372,77 @@ th:
             - R.War and Order
             - S.War Dragons
             - T.War Z
-            - U.NA
-        - title:  7.哪一类题材的游戏最吸引你？【可选择多项】
+            - U.อื่นๆ
+        - title:  7.เกมประเภทไหนที่ดึงดูดคุณได้มากที่สุด【เลือกได้หลายข้อ】
           type: 1
           selects:
-            - A.历史战争（如欧洲中世纪、二战等真实历史）
-            - B.星际战争（发生在星际宇宙中，主要在地球外的太空中进行）
-            - C.现代商业（以现代商业竞争为背景，以真实商业经营管理规律为基础）
-            - D.西方奇幻（以古希腊、古罗马、北欧、埃及等地区的神话故事为主）
-            - E.东方神话（以中国、日本、东南亚等地区的神话故事为主）
-            - F.体育经营（经营球类、田径或其他体育项目的组织运作）
-            - G.模拟经营（建设发展、社会民生）
-            - H.黑帮犯罪（黑帮社团的龙争虎斗，充斥金钱、暴力、阴谋、罪恶）
-            - [I.其他,2]
-        - title: 8.每日玩手机游戏时长
+            - A.สงครามประวัติศาสตร์(เช่นเรื่องจริงของยุโรปยุคกลางและสงครามโลกครั้งที่สอง)
+            - B.สงครามระหว่างดาว(เกิดขึ้นที่ดวงดาวจักรวาล และดำเนินการที่จักรวาลนอกโลก)
+            - C.ธุรกิจสมัยใหม่(มีการแข่งขันระหว่างธุรกิจเป็นพื้นหลัง และมีการจัดการธุรกิจเป็นพื้นฐานหลัก)
+            - D.มหัศจรรย์แบบตะวันตก(มีตำนานของสมัยกรีกโบราณ กรุงโรมันโบราณ นอร์ดิก อียีปต์เป็นหลัก)
+            - E.ตำนานตะวันออก(มีตำนานของจีน ญี่ปุ่น เอเชียตะวันตกเฉียงใต้เป็นหลัก)
+            - F.การจัดการกีฬา(จัดการประเภทบอล กีฑาและกีฬาประเภทอื่นๆ)
+            - G.การจัดการแบบจำลอง(การพัฒนาการก่อสร้างและสังคม)
+            - H.กลุ่มอาชญกรรม(แก่งแย่งกันในกลุ่ม ทั้งเรื่องเงิน ความรุนแรง วางแผน ความผิดบาป)
+            - [I.อื่นๆ,2]
+       - title: 8.เวลาในการเล่นเกม
           type: 0
           selects:
-            - A.0.5小时以内
-            - B.0.5-1小时
-            - C.1-2小时
-            - D.2-3小时
-            - E.3小时以上
-        - title: 9.你目前的年收入（税前）
+            - A.ไม่เกิน0.5ชั่วโมง
+            - B.0.5-1ชั่วโมง
+            - C.1-2ชั่วโมง
+            - D.2-3ชั่วโมง
+            - E.มากกว่า3ชั่วโมง
+        - title: 9.รายได้ต่อปีปัจจุบัน(ก่อนหักภาษี)
           type: 0
           selects:
-            - A.$20000以下            
-            - B.$20001-50000
-            - C.$50001-100000             
-            - D.$100000以上
-        - title: 10你每月在游戏上的花费有多少金额？
+            - A.น้อยกว่า600,000บาท  
+            - B.600,030-1,500,000บาท
+            - C.1,500,030-3,000,000บาท          
+            - D.3,000-000บาทขึ้นไป
+        - title: 10คุณใช้จ่ายเกี่ยวกับเกมเดือนละเท่าไหร่?
           type: 0
           selects:
-            - A.无付费
-            - B.$1-100元
-            - C.$11-500元
-            - D.$501-1000元
-            - E.$1000以上
-        - title: 11.你为一款游戏最多累计付费过多少金额？
+            - A.ไม่เสียค่าใช้จ่าย
+            - B.30-3,000บาท
+            - C.3000-15,000บาท
+            - D.15,000-30,000บาท
+            - E.30,000บาทขึ้นไป
+        - title: 11.คุณใช้จ่ายในเกมหนึ่งเกมทั้งหมดเท่าไหร่?
           type: 0
           selects:
-            - A.无付费
-            - B.$1-30元
-            - C.$31-100元
-            - D.$101-1000元
-            - E.$1000以上
-        - title: 12.你主要通过什么途径知道一款新游戏呢？（可选择多项）
+            - A.ไม่เสียค่าใช้จ่าย
+            - B.30-900บาท
+            - C.900-3,000บาท
+            - D.3,000-30,000บาท
+            - E.30,000บาทขึ้นไป
+         - title: 12.คุณทราบว่ามีเกมใหม่โดยผ่านช่องทางไหน?(เลือกได้หลายข้อ)
           type: 1
           selects:
-            - A.社交媒体广告（Facebook、Youtube、Twitter）
-            - B.日常app广告（？？？？？）
-            - C.游戏里的广告（如一些游戏内的嵌入链接广告）
-            - D.自媒体（Facebook大号推广）
-            - E.户外广告（电梯广告、地铁广告、院线广告）
-            - F.电视广告（电视台的广告）
-            - G.应用商店（Appstore排行榜）
-            - H.朋友介绍
-            - [I.其他,2]
-        - title: 13.你喜欢Wars Mobile这款游戏的画风吗？
+            - A.โฆษณาโซเชียลมีเดีย(เฟซบุค ยูทูป ทวิตเตอร์)
+            - B.โฆษณาประจำวัน
+            - C.โฆษณาในเกม(เช่นลิ้งค์โฆษณาที่ปรากฎในเกม)
+            - D.โซเชียลมีเดีย(เฟซบุค)
+            - E.โฆษณาภายนอก(โฆษณาบนบันไดเลื่อน ใต้ดิน โรงภาพยนต์)
+            - F.โฆษณาโทรทัศน์(โฆษณาในทีวี)
+            - G.แอพสตอร์(การจัดอันดับในApptore)
+            - H.เพื่อนแนะนำ
+            - [I.อื่นๆ,2]
+        - title: 13.คุณชอบรูปแบบเกมWars Mobileหรือไม่?
           type: 0
           selects:
-            - A.5分非常喜欢
-            - B.4分喜欢
-            - C.3分一般喜欢
-            - D.2分以下不喜欢
-        - title: 14.你愿意把War Mobile这款游戏推荐给朋友？
+            - A.ชอบมาก
+            - B.ชอบ
+            - C.เฉยๆ
+            - D.ไม่ชอบ
+        - title: 14.คุณจะแนะนำเกมWars Mobileให้เพื่อนหรือไม่?
           type: 0
           selects:
-            - A.5分非常愿意
-            - B.4分愿意
-            - C.3分看机会
-            - D.2分以下不愿意
-        - title: 15.以下三条游戏slogan，你更喜欢哪个？如果都不喜欢，请选择其他，并为我们创意一条slogan，如果你创意的slogan获得采纳，将会给您丰富的游戏内奖励。
+            - A.แนะนำแน่นอน
+            - B.แนะนำ
+            - C.ดูโอกาส
+            - D.ไม่แนะนำ
+        - title: 15.สโลแกน3ข้อต่อไปนี้ คุณชอบอันไหนมากที่สุด?ถ้าหากไม่ชอบ กรุณาเลือกอื่นๆ และสร้างสโลแกนให้กับเราหนึ่งอัน ถ้าหากได้รับการเลือก เราจะมีรางวัลให้คุณ
           type: 0
           selects:
             - A.War makes hero!

@@ -1,4 +1,52 @@
+zh:
+  display_name: 中文
+  en: English
+  th: ภาษาไทย
+  btn_search: 搜索
+  search_holder: 查找问题
 
+  support_home: 支持
+  all_qa: 所有问题
+  submit_ticket: 投票
+  language: 语言  
+  hot_issues: 热门问题
+  menu: 目录
+
+  category: 类别
+  c_all: 所有  
+  error_request: 错误请求  
+  submit_success: 提交成功!
+  submit_failed: 提交失败!
+  submit_ticket_title: 信息
+  ticket_id: ID
+  ticket_email: 邮箱地址
+  ticket_topic: 类别
+  ticket_detail: 详细内容
+  td_des: 描述需要在400字以内
+  td_promise: 我们承诺在24小时内回复您！
+  ticket_btn: 提交
+  ticket_select: 题目
+  my_tickets: 我的问题  
+  completed: 完成  
+  pending: 有疑问的
+
+  next_page: 下一页
+  no_question_tip: 没有正确答案.点击“提交”创建新的答案
+  voted: 已经投过票了！
+  net_error: 网络错误！  
+  err: Error
+  err_rsh_require: 请填写后再提交！
+  success_rsh: 投票提交成功！  
+  rsh_not_selected: 第{count}题未选择  
+  prev_title: 上一题 
+  next_title: 下一题
+  submit: 提交
+  rsh_types:
+    name: 问题类别
+    types:
+      - 单选
+      - 多选
+      - 自述
 en:
   display_name: English
   en: English
@@ -35,23 +83,21 @@ en:
 
   next_page: Next Page
   no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
-  voted: 已经投过票了！
-  net_error: 网络错误！
+  voted: Voted！
+  net_error: Network error!
   err: Error
-  err_rsh_require: 请填写后再提交！
-  success_rsh: 投票提交成功！
-  rsh_not_selected: 第{count}题未选择
-
-
-  prev_title: 上一题
-  next_title: 下一题
-  submit: 提交
+  err_rsh_require: Please fill in and submit it.
+  success_rsh: Submitted
+  rsh_not_selected: No.{count} Question Unselected  
+  prev_title: Previous 
+  next_title: Next
+  submit: Submit
   rsh_types:
-    name: 问题类别
+    name: Category
     types:
-      - 单选
-      - 多选
-      - 自述
+      - Single Selection
+      - Multiselect
+      - Detail
   
 th:
   display_name: Thailand
@@ -89,22 +135,23 @@ th:
   next_page: หน้าถัดไป
   no_question_tip: ยังไม่มีคำถาม กดส่งเพื่อสร้างใหม่.
 
-  voted: 已经投过票了！
-  net_error: 网络错误！
-  err_rsh_require: 请填写后再提交！
-  success_rsh: 投票提交成功！
-  rsh_not_selected: 第{count}题未选择
+  voted:  โหวตไปเเล้ว
+  net_error: อินเตอร์เน็ตขัดข้อง
 
+  err_rsh_require: กรุณากรอกก่อนส่ง
 
-  prev_title: 上一题
-  next_title: 下一题
+  success_rsh: โหวตสำเร็จ
 
-  submit: 提交
+  rsh_not_selected: ข้อที่{count} ยังไม่ได้เลือก
+
+  prev_title:  ข้อที่เเล้ว
+  next_title:  ข้อถัดไป
+
+  submit:  ส่ง
   rsh_types:
-    name: 问题类别
+    name:  ประเภทคำถาม
+
     types:
-      - 单选
-      - 多选
-      - 自述
-
-
+      -  เลือกตอบเพียงหนึ่ง
+      -  เลือกได้หลายตัวเลือก
+      -  เกี่ยวกับตัวฉัน

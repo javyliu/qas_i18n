@@ -54,12 +54,14 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
+      title: 'Game Qas',
       //inject: true
       excludeChunks: ['rsh/app', 'news/app'],
     }),
     new HtmlWebpackPlugin({
       filename: 'rsh/index.html',
-      template: 'index_research.html',
+      title: 'Research',
+      template: 'index.html',
       //inject: true
       // excludeChunks: ['rsh/app'],
       excludeChunks: ['app', 'news/app'],
@@ -67,7 +69,8 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: 'news/index.html',
-      template: 'index_research.html',
+      title: 'news',
+      template: 'index.html',
       //inject: true
       // excludeChunks: ['rsh/app'],
       excludeChunks: ['app', 'rsh/app'],

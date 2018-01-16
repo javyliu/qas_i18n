@@ -32,14 +32,14 @@ const i18n = new VueI18n({
 axios.defaults.baseURL = _global.BaseUrl;
 
 // // intercepte request
-// axios.interceptors.request.use((config) => {
-//   if (!/locale=/.test(config.url)) {
-//     config.url += ((config.url.indexOf('?') === -1 ? '?' : '&') + 'locale=' + i18n.locale);
-//   }
-//   return config;
-// }, function (error) {
-//   return Promise.reject(error);
-// });
+axios.interceptors.request.use((config) => {
+  if (!/locale=/.test(config.url)) {
+    config.url += ((config.url.indexOf('?') === -1 ? '?' : '&') + 'locale=' + i18n.locale);
+  }
+  return config;
+}, function(error) {
+  return Promise.reject(error);
+});
 
 // // get cates
 
@@ -78,6 +78,7 @@ axios.defaults.baseURL = _global.BaseUrl;
 Vue.use(VueAxios, axios);
 
 // Vue.config.productionTip = false;
+// 入口地址： http://192.168.30.244:8080/rsh?lang=en&game_id=19&rsh_id=1&name=guest&partition=test
 
 /* eslint-disable no-new */
 new Vue({
@@ -96,6 +97,8 @@ new Vue({
       // this.global.init_data = this.$route.query;
       // this.global.game_id = this.global.init_data.game_id || this.global.game_id;
       this.$localStorage.rsh_data = this.$route.query;
+    } else if (this.$localStorage.rsh_data.lang) {
+      this.$i18n.locale = this.$localStorage.rsh_data.lang;
     }
     // console.log(this.$i18n.locale);
   },
@@ -110,7 +113,8 @@ new Vue({
         game_id: 19,
         rsh_id: 1,
         name: 'guest',
-        lang: 'en'
+        lang: 'en',
+        partition: 'test'
       }
     }
   }

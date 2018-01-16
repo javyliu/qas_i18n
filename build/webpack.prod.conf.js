@@ -61,6 +61,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: 'index.html',
+      title: 'Game Qas',
       // chunks: ['app', 'manifest', 'vendor'],
       excludeChunks: ['rsh/app', 'news/app'],
       // inject: true,
@@ -76,7 +77,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: config.build.rsh,
-      template: 'index_research.html',
+      template: 'index.html',
+      title: 'Research',
       // chunks: ['rsh/app'],
       excludeChunks: ['app', 'news/app'],
       minify: {
@@ -91,7 +93,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new HtmlWebpackPlugin({
       filename: config.build.news,
-      template: 'index_research.html',
+      title: 'News',
+      template: 'index.html',
       // chunks: ['rsh/app'],
       excludeChunks: ['app', 'rsh/app'],
       minify: {

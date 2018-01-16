@@ -96,11 +96,13 @@ export default {
         this.$refs.reveal.openReveal(notSelected.join(' '), this.$i18n.t('err'));
       } else {
         this.$http
-          .post('/rsh_vote', Object.assign({ research_id: this.rsh.rsh_id, game_id: this.rsh_data.game_id, game_name: this.rsh_data.name }, _values))
+          .post('/rsh_vote', Object.assign({ research_id: this.rsh.rsh_id, game_id: this.rsh_data.game_id, game_name: this.rsh_data.name, partition: this.rsh_data.partition }, _values))
           .then(res => {
+            this.is_error = false;
             this.$refs.reveal.openReveal(this.$i18n.t('success_rsh'));
           })
           .catch(error => {
+            this.is_error = true;
             let _msg = '';
             if (error.response.data.error === 'voted') {
               _msg = this.$i18n.t('voted');
@@ -129,6 +131,9 @@ export default {
       return notSelectedKeys;
     },
     onClose() {
+      if (this.is_error) {
+        return;
+      }
       this.global.rsh_values = {};
       this.show_btn = false;
       this.width = 0;

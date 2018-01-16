@@ -2,6 +2,7 @@ zh:
   display_name: 中文
   en: English
   th: ภาษาไทย
+  zh: 中文
   btn_search: 搜索
   search_holder: 查找问题
 
@@ -51,6 +52,7 @@ en:
   display_name: English
   en: English
   th: ภาษาไทย
+  zh: 中文
   btn_search: Search
   search_holder: Find an Answer
 
@@ -103,6 +105,7 @@ th:
   display_name: Thailand
   en: ภาษาอังกฤษ
   th: ภาษาไทย
+  zh: 中文
   btn_search: ค้นหา
   search_holder: ค้นหาคำถาม
 
@@ -138,6 +141,7 @@ th:
   voted:  โหวตไปเเล้ว
   net_error: อินเตอร์เน็ตขัดข้อง
 
+  err: Error
   err_rsh_require: กรุณากรอกก่อนส่ง
 
   success_rsh: โหวตสำเร็จ

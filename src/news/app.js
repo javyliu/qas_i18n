@@ -61,7 +61,11 @@ new Vue({
       // this.global.game_id = this.global.init_data.game_id || this.global.game_id;
       this.$localStorage.news_data = this.$route.query;
     }
+
     // console.log(this.$i18n.locale);
+  },
+  methods: {
+
   },
   mounted: function() {
     console.log('载入成功');

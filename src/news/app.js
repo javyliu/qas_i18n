@@ -6,12 +6,11 @@ import App from '@/components/news/App';
 import router from '../router/news_router';
 import VueI18n from 'vue-i18n';
 import baseMessages from '../locales/news_locales.yml';
-import questions from '../locales/questions/qa_1.yml';
 import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueLocalStorage from 'vue-localstorage';
 import _global from '../global_config';
-const merge = require('webpack-merge');
+// const merge = require('webpack-merge');
 
 Vue.use(VueLocalStorage, {
   createComputed: true
@@ -23,7 +22,7 @@ Vue.use(VueI18n);
 const i18n = new VueI18n({
   locale: _global.getLanguage(baseMessages), // set locale
   fallbackLocale: 'en',
-  messages: merge(baseMessages, questions), // set locale messages
+  messages: baseMessages,
   missing: (locale, key, vm) => {
     console.log(`${JSON.stringify(vm.$i18n.messages.en)},${locale} 中 ${key} 不存在`);
   }
@@ -31,6 +30,15 @@ const i18n = new VueI18n({
 
 axios.defaults.baseURL = _global.BaseUrl;
 
+// intercepte request
+axios.interceptors.request.use((config) => {
+  if (!/locale=/.test(config.url)) {
+    config.url += ((config.url.indexOf('?') === -1 ? '?' : '&') + 'locale=' + i18n.locale);
+  }
+  return config;
+}, function(error) {
+  return Promise.reject(error);
+});
 Vue.use(VueAxios, axios);
 
 // Vue.config.productionTip = false;
@@ -43,7 +51,7 @@ new Vue({
   template: '<App></App>',
   components: { App },
   created: function() {
-    console.log('调查app 创建 成功,获取类别数据');
+    console.log('新闻app 创建 成功,获取类别数据');
     // if (this.$route.query.game_id) {
     //   this.global.game_id = this.$route.query.game_id;
     // }
@@ -51,7 +59,7 @@ new Vue({
     if (this.$route.name === 'home' && !this.global.isEmpty(this.$route.query)) {
       // this.global.init_data = this.$route.query;
       // this.global.game_id = this.global.init_data.game_id || this.global.game_id;
-      this.$localStorage.rsh_data = this.$route.query;
+      this.$localStorage.news_data = this.$route.query;
     }
     // console.log(this.$i18n.locale);
   },
@@ -60,13 +68,13 @@ new Vue({
   },
 
   localStorage: {
-    rsh_data: {
+    news_data: {
       type: Object,
       default: {
         game_id: 19,
-        rsh_id: 1,
         name: 'guest',
-        lang: 'en'
+        lang: 'en',
+        partition: 'test1'
       }
     }
   }

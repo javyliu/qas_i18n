@@ -3,36 +3,17 @@ zh:
   en: English
   th: ภาษาไทย
   zh: 中文
-  btn_search: 搜索
-  search_holder: 查找问题
-
-  support_home: 支持
-  all_qa: 所有问题
-  submit_ticket: 投票
-  language: 语言  
-  hot_issues: 热门问题
-  menu: 目录
-
-  category: 类别
-  c_all: 所有  
+  btn_search: 搜索  
+  language: 语言   
   error_request: 错误请求  
   submit_success: 提交成功!
-  submit_failed: 提交失败!
-  submit_ticket_title: 信息
-  ticket_id: ID
-  ticket_email: 邮箱地址
-  ticket_topic: 类别
-  ticket_detail: 详细内容
-  td_des: 描述需要在400字以内
-  td_promise: 我们承诺在24小时内回复您！
+  submit_failed: 提交失败! 
   ticket_btn: 提交
-  ticket_select: 题目
-  my_tickets: 我的问题  
+
   completed: 完成  
   pending: 有疑问的
 
   next_page: 下一页
-  no_question_tip: 没有正确答案.点击“提交”创建新的答案
   voted: 已经投过票了！
   net_error: 网络错误！  
   err: Error
@@ -54,37 +35,19 @@ en:
   th: ภาษาไทย
   zh: 中文
   btn_search: Search
-  search_holder: Find an Answer
-
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
   language: Languages
-  hot_issues: Hot Topics
-  menu: Menu
-
-  category: CATEGORIES
-  c_all: All
 
   error_request: Request error!
   submit_success: Ticket submit success!
   submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
-  ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
+  
+ 
   ticket_btn: SUBMIT
   ticket_select: Subject
-  my_tickets: My Tickets
 
   completed: Completed
   pending: Pending
-
   next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
   voted: Voted！
   net_error: Network error!
   err: Error
@@ -109,34 +72,20 @@ th:
   btn_search: ค้นหา
   search_holder: ค้นหาคำถาม
 
-  support_home: หน้าแรก
-  all_qa: คำถามทั้งหมด
   submit_ticket: ส่ง
   language: ภาษา
-  hot_issues: คำถามยอดฮิต
-  menu: เมนู
 
-  category: ประเภท
-  c_all: คำถามทั้งหมด
-
+ 
   error_request: คำสั่งผิด!
   submit_success: ส่งสำเร็จ!
-  submit_failed: ส่งไม่สำเร็จ!
-  submit_ticket_title: ส่งคำถาม
-  ticket_id: ID
-  ticket_email: อีเมล
-  ticket_topic: ประเภท
-  ticket_detail: รายละเอียดคำถาม
-  td_des: ระหว่าง0~400ตัวอักษร
-  td_promise: ทางเราจะติดต่อกลับภายใน24ชั่วโมง
+  submit_failed: ส่งไม่สำเร็จ! 
+  
   ticket_btn: ส่ง
   ticket_select: เลือก
-  my_tickets: คำถามที่ฉันส่ง
 
   completed: สำเร็จ
   pending: กำลังดำเนิน
   next_page: หน้าถัดไป
-  no_question_tip: ยังไม่มีคำถาม กดส่งเพื่อสร้างใหม่.
 
   voted:  โหวตไปเเล้ว
   net_error: อินเตอร์เน็ตขัดข้อง

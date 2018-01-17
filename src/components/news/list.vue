@@ -1,13 +1,14 @@
 <template>
   <ul class="list_news">
-    <li v-for="item in news" class="grid-x grid-padding-x"  :key="item.id">
+    <router-link to="/foo" tag="li" v-for="item in news" class="grid-x grid-padding-x"  :key="item.id">
       <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
-      <div class="cell auto"> <router-link :to="{name: 'news_detail', params: {id: item.id}}">{{item.title}}</router-link>
+      <div class="cell auto"><div class="title">{{item.title}}</div>
         <div class="g_line"></div>
         <div class="c_time">{{item.create_time}}</div>
         <div class="pa tags"><span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
       </div>
-    </li>
+    </router-link>
+
   </ul>
 </template>
 
@@ -50,7 +51,7 @@ export default {
     position: relative;
     border: solid 1px rgba(255, 255, 0, 0.164);
     padding: 5px 0;
-    a {
+    .title {
       color: yellow;
     }
     .pa {

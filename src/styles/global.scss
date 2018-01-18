@@ -67,3 +67,18 @@
 .reveal-overlay {
   overflow: hidden !important;
 }
+.title {
+  box-shadow:1px 1px 9px #4CF;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  background: rgb(39, 39, 66);
+  color: white;
+  padding: 5px;
+  h4 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 9px #4CF;
+  }
+}

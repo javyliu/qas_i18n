@@ -1,8 +1,8 @@
 <template>
   <ul class="list_news">
-    <router-link to="/foo" tag="li" v-for="item in news" class="grid-x grid-padding-x"  :key="item.id">
+    <router-link :to="{name: 'news_detail', params: {id: item.id }}" tag="li" v-for="item in news" class="grid-x grid-padding-x" :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id">
       <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
-      <div class="cell auto"><div class="title">{{item.title}}</div>
+      <div class="cell auto"><div class="news_title">{{item.title}}</div>
         <div class="g_line"></div>
         <div class="c_time">{{item.create_time}}</div>
         <div class="pa tags"><span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
@@ -31,10 +31,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.g_line {
-  height: 1px;
-  background-image: linear-gradient(left, rgba(228, 213, 11, 0.5), rgba(0, 0, 0, 0));
-}
 .img {
   text-shadow: 2px 2px #ff0000;
 }
@@ -43,15 +39,13 @@ export default {
 }
 .list_news {
   margin: 0;
-
   li {
-    background-image: linear-gradient(0deg, #7d0707, #70052c 60%, #610612);
     margin: 5px;
     border-radius: 5px;
     position: relative;
     border: solid 1px rgba(255, 255, 0, 0.164);
     padding: 5px 0;
-    .title {
+    .news_title {
       color: yellow;
     }
     .pa {

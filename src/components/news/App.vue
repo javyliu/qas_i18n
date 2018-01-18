@@ -1,7 +1,7 @@
 <template>
   <div id="app" >
     <div class="grid-container full">
-      <div class="grid-x news_title">
+      <div class="grid-x title">
         <div class="cell small-2"><img src="../../assets/img/back.png" v-show="$route.name !== 'home'" @click="$router.go(-1)"></div>
         <div class="cell auto">
         <h4 class="text-center">{{$t(`news_title.${init_data.game_id}`)}}</h4>
@@ -31,7 +31,7 @@ export default {
             .get('/news/list', {
               params: {
                 game_id: that.init_data.game_id,
-                cate_id: null
+                cate_id: 9
               }
             })
             .then(function(res) {
@@ -55,20 +55,18 @@ export default {
 body {
   background-color: rgb(91, 96, 109);
 }
+.g_line {
+  height: 1px;
+  background-image: linear-gradient(left, rgba(228, 213, 11, 0.5), rgba(0, 0, 0, 0));
+}
+.red_bg {
+  background-image: linear-gradient(0deg, #7d0707, #70052c 60%, #610612);
+}
+.blue_bg {
+  background-image: linear-gradient(0deg, #07447d, #054e70 60%, #062361);
+}
 #app {
   padding-top: 45px;
-}
-.news_title {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 10;
-  background: rgb(39, 39, 66);
-  color: white;
-  padding: 5px;
-  h4 {
-    margin: 0;
-  }
 }
 a:focus {
   outline: none;

@@ -20,6 +20,7 @@ zh:
   news_title:
     22: 王国新闻
     19: 世界大战新闻
+  rsh_link: '/rsh?lang={lang}&name={name}&rsh_id={rsh_id}&partition={partition}&game_id={game_id}'
 
 en:
   display_name: English

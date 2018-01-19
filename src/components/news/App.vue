@@ -50,7 +50,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scopted>
+<style lang="scss">
 @import '../../styles/global';
 body {
   background-color: rgb(91, 96, 109);

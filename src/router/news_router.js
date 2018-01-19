@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import List from '@/components/news/list';
 import NewsDetail from '@/components/news/news_detail';
+import Activity from '@/components/news/activity';
 
 Vue.use(Router);
 
@@ -19,6 +20,12 @@ export default new Router({
       path: '/detail/:id',
       name: 'news_detail',
       component: NewsDetail,
+      props: true
+    },
+    {
+      path: '/acts/:id',
+      name: 'activity',
+      component: Activity,
       props: true
     }
   ]

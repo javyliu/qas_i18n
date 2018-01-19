@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scopted>
+<style lang="scss">
 @import '../../styles/global';
 #app {
   padding-top: 45px;

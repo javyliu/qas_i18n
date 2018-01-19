@@ -1,5 +1,5 @@
 <template>
-  <div class="n_detail callout warning">
+  <div class="n_detail callout alert">
       <div class="loading" v-if="!detail">
         Loading...
       </div>
@@ -28,8 +28,8 @@ export default {
   methods: {
     get_detail() {
       let that = this;
-      console.info('get detail');
-      this.$http.get(`/news/detail/${this.$props.id}`).then(function(res) {
+      console.info('get activity detail');
+      this.$http.get(`/acts/detail/${this.$props.id}`).then(function(res) {
         res.data.content = res.data.content.replace(/rsh_link:(\d+)/g, that.$i18n.t('rsh_link', Object.assign({ rsh_id: '$1' }, that.$parent.init_data)));
         that.detail = res.data;
       });

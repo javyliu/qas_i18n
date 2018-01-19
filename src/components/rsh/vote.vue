@@ -15,7 +15,7 @@
         </ul>
         <router-link :to="{path: `/vote/${prev_id}`}" v-if="prev_id" class="orbit-previous">{{$t('prev_title')}}</router-link>
         <router-link :to="{path: `/vote/${next_id}`}" v-if="next_id" class="orbit-next">{{$t('next_title')}}</router-link>
-        <div class="step"><div :style="{width}"></div></div>
+        <div class="step"><div :style="{width: width+'%'}"></div></div>
         <div class="grid-x">
           <div class="cell small-4">
             <router-link :to="{path: `/vote/${prev_id}`}" v-if="prev_id" class="button success small">{{$t('prev_title')}}</router-link>
@@ -116,7 +116,7 @@ export default {
     setWidth() {
       let len = this.all_keys.length;
       let nlen = this._notSelected().length;
-      this.width = (len - nlen) * 100 / len + '%';
+      this.width = ((len - nlen) * 100 / len).toFixed(1);
       this.show_btn = !nlen;
     },
     _notSelected() {
@@ -221,10 +221,11 @@ fieldset {
 }
 .step {
   margin-bottom: 10px;
-  background: rgba(159, 160, 159, 0.678);
+  position: relative;
+  background: #eee;
   div {
     height: 3px;
-    background-color: #e78318a8;
+    background-color: rgb(240, 146, 6);
   }
 }
 </style>

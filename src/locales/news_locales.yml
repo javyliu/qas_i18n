@@ -20,7 +20,7 @@ zh:
   news_title:
     22: 王国新闻
     19: 世界大战新闻
-  rsh_link: '/rsh?lang={lang}&name={name}&rsh_id={rsh_id}&partition={partition}&game_id={game_id}'
+  rsh_link: '/rsh?lang={lang}&name={name}&rsh_id={rsh_id}&p_name={p_name}&game_id={game_id}&acc_name={acc_name}'
 
 en:
   display_name: English
@@ -39,6 +39,10 @@ en:
   err_rsh_require: Please fill in and submit it.
   success_rsh: Submitted
   submit: Submit
+  news_title:
+    22: 王国新闻
+    19: 世界大战新闻
+  rsh_link: '/rsh?lang={lang}&name={name}&rsh_id={rsh_id}&p_name={p_name}&game_id={game_id}&acc_name={acc_name}'
 th:
   display_name: Thailand
   en: ภาษาอังกฤษ
@@ -57,3 +61,7 @@ th:
   net_error: อินเตอร์เน็ตขัดข้อง
   err: Error
   submit:  ส่ง
+  news_title:
+    22: 王国新闻
+    19: 世界大战新闻
+  rsh_link: '/rsh?lang={lang}&name={name}&rsh_id={rsh_id}&p_name={p_name}&game_id={game_id}&acc_name={acc_name}'

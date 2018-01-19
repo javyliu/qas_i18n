@@ -78,7 +78,7 @@ new Vue({
         game_id: 19,
         name: 'guest',
         lang: 'en',
-        partition: 'test1'
+        p_name: 'test1'
       }
     }
   }

@@ -114,7 +114,7 @@ new Vue({
         rsh_id: 1,
         name: 'guest',
         lang: 'en',
-        partition: 'test'
+        p_name: 'test'
       }
     }
   }

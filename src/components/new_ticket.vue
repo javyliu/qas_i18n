@@ -102,6 +102,9 @@ export default {
       let data = {
         qa: {
           game_role_id: this.init_data.id,
+          game_role_name: this.init_data.name,
+          game_user_name: this.init_data.acc_name,
+          game_server_name: this.init_data.p_name,
           qa_cate_id: this.qa_cate_id,
           question: this.question,
           email: this.email

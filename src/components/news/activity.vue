@@ -9,10 +9,14 @@
         <hr>
         <div v-html="detail.content"></div>
       </div>
+      <reveal ref="reveal"></reveal>
+
   </div>
 </template>
 
 <script>
+import Reveal from '@/components/Reveal';
+
 export default {
   name: 'news_detail',
   data() {
@@ -25,6 +29,24 @@ export default {
   watch: {
     $route: 'get_detail'
   },
+  mounted() {
+    let that = this;
+    $('.n_detail').on('click', 'a.need_cb', function(e) {
+      e.preventDefault();
+      console.log($(this).text());
+      that.$http
+        .post(this.href, that.$parent.init_data)
+        .then(function(res) {
+          console.log(res.data);
+          that.$refs.reveal.openReveal(res.data, that.$i18n.t('success'));
+        })
+        .catch(function(res) {
+          console.log('----------------------');
+          console.log(res.response.data.error);
+          that.$refs.reveal.openReveal(res.response.data.error);
+        });
+    });
+  },
   methods: {
     get_detail() {
       let that = this;
@@ -35,7 +57,10 @@ export default {
       });
     }
   },
-  computed: {}
+  computed: {},
+  components: {
+    Reveal
+  }
 };
 </script>
 

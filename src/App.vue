@@ -22,7 +22,7 @@
         </li>
       </ul>
     </div>
-    <div class="off-canvas-content grid-container full" data-off-canvas-content>
+    <div class="off-canvas-content grid-container full fixed_head" data-off-canvas-content>
       <div class="top-bar grid-x">
         <div class="cell small-6 shrink">
           <ul class="menu">
@@ -95,6 +95,15 @@ export default {
 @import './styles/global';
 
 // Chrome Reset
+.fixed_head {
+  padding-top: 58px;
+  .top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+}
 a:focus {
   outline: none;
 }

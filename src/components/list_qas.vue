@@ -3,7 +3,7 @@
     <div class="cell">
       <ul class="common_qas" v-if="common_qas && common_qas.length > 0">
         <li v-for="(item,index) in common_qas" :key="item.id">
-          <p class="title">
+          <p class="qa_title">
             <span class="primary badge">{{index + 1}}</span>
             {{item.question}}
           </p>
@@ -64,7 +64,7 @@ export default {
   p {
     text-indent: 2em;
     text-align: justify;
-    &.title {
+    &.qa_title {
       text-indent: 0;
       margin-bottom: 5px;
       font-weight: bold;

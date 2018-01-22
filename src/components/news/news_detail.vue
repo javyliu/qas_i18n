@@ -38,7 +38,6 @@ export default {
         })
         .catch(function(res) {
           console.log('----------------------');
-          console.log(res.response.data.error);
           that.$refs.reveal.openReveal(res.response.data.error, that.$i18n.t('err'));
         });
     });

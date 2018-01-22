@@ -96,7 +96,10 @@ export default {
         this.$refs.reveal.openReveal(notSelected.join(' '), this.$i18n.t('err'));
       } else {
         this.$http
-          .post('/rsh_vote', Object.assign({ research_id: this.rsh.rsh_id, game_id: this.rsh_data.game_id, name: this.rsh_data.name, partition: this.rsh_data.p_name }, _values))
+          .post(
+            '/rsh_vote',
+            Object.assign({ user_id: this.rsh_data.user_id, research_id: this.rsh.rsh_id, game_id: this.rsh_data.game_id, name: this.rsh_data.name, partition: this.rsh_data.p_name }, _values)
+          )
           .then(res => {
             this.is_error = false;
             this.$refs.reveal.openReveal(this.$i18n.t('success_rsh'));

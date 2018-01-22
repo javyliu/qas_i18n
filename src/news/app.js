@@ -78,7 +78,9 @@ new Vue({
         game_id: 19,
         name: 'guest',
         lang: 'en',
-        p_name: 'test1'
+        p_name: 'test1',
+        user_id: 1000,
+        acc_name: 'guest1212'
       }
     }
   }

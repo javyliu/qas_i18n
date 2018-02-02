@@ -104,7 +104,7 @@ new Vue({
     init_data: {
       type: Object,
       default: {
-        game_id: 19
+        game_id: 26
       }
     }
   }

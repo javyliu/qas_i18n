@@ -27,7 +27,7 @@
         <div class="cell small-6 shrink">
           <ul class="menu">
             <li class="logo">
-              <router-link to="/"><img src="./assets/img/ww_logo.png" alt="wars mobile"></router-link>
+              <router-link to="/"><img src="./assets/img/logo_wm.png" alt="" ></router-link>
             </li>
           </ul>
         </div>

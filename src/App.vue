@@ -27,7 +27,10 @@
         <div class="cell small-6 shrink">
           <ul class="menu">
             <li class="logo">
-              <router-link to="/"><img src="./assets/img/logo_wm.png" alt="" ></router-link>
+              <router-link to="/">
+                <img src="./assets/img/logo_cot.png" alt="" v-if="is_game('25')" >
+                <img src="./assets/img/logo_wm.png" alt="" v-else >
+              </router-link>
             </li>
           </ul>
         </div>
@@ -79,6 +82,9 @@ export default {
         this.$router.push({ name: 'home' });
       }
       // this.global.getUserCates();
+    },
+    is_game(gameId) {
+      return this.$localStorage.init_data.game_id === gameId;
     }
   },
   computed: {
@@ -113,6 +119,9 @@ a:focus {
   font-weight: normal;
   background-color: inherit;
   padding: 0;
+}
+.logo img {
+  height: 42px;
 }
 .top-bar,
 .top-bar ul {

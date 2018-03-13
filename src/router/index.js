@@ -5,6 +5,7 @@ import ListQas from '@/components/list_qas';
 import Cates from '@/components/cates';
 import NewTicket from '@/components/new_ticket';
 import MyTickets from '@/components/my_tickets';
+import NewQuestion from '@/components/new_question';
 
 Vue.use(Router);
 export default new Router({
@@ -35,6 +36,11 @@ export default new Router({
       path: '/my_tickets',
       name: 'my_tickets',
       component: MyTickets
+    },
+    {
+      path: '/new_question',
+      name: 'new_question',
+      component: NewQuestion
     }
   ]
 });

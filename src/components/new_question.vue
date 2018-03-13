@@ -11,11 +11,21 @@
           </div>
           <div class="grid-x grid-margin-x medium-up-3">
             <div class="cell">
-              <label class="height_holder">{{$t("ticket_id")}}:
+              <label class="height_holder">{{$t("new_q_id")}}: <strong>{{init_data.id}}</strong>
               </label>
-              <div class="height_holder">
-                <strong>{{init_data.id}}</strong>
-              </div>
+              <p>{{$t("new_q_des")}}</p>
+            </div>
+            <div class="cell">
+              <label>{{$t("new_q_role_name")}}
+                <em>*</em>
+              </label>
+              <input type='text' v-model="role_name" placeholder="xxx" required="required" />
+            </div>
+            <div class="cell">
+              <label>{{$t("new_q_time")}}
+                <em>*</em>
+              </label>
+              <input type='datetime-local' v-model="issue_time" placeholder="MM/DD/YYYY" required="required" />
             </div>
             <div class="cell">
               <label>{{$t("ticket_email")}}
@@ -23,15 +33,7 @@
               </label>
               <input type="email" v-model="email" placeholder="javy@pearlinpalm.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" />
             </div>
-            <div class="cell">
-              <label>{{$t("ticket_topic")}}
-                <em>*</em>
-              </label>
-              <select required="required" v-model="qa_cate_id">
-                <option value="">{{$t("ticket_select")}}</option>
-                <option v-for="item in user_cates" :key="item.id" :value="item.id">{{item.name}}</option>
-              </select>
-            </div>
+
           </div>
           <div class="grid-x">
             <div class="cell">
@@ -56,10 +58,6 @@
 
 <script>
 /*
-http://m.pipgame.com/en_qas/new?id=xxx&name=xxx&p_name=xxx&game_id=xxx
-http://localhost:8080/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=19&acc_name=xxx&version=0.1.0&lang=en
-http://192.168.0.252:7092/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=19&acc_name=xxx&version=0.1.0&lang=en
-http://qa.gamepip.com/#/new_ticket?id=10000&name=xxx&p_name=xxx&game_id=26&acc_name=xxx&version=0.1.0&lang=en
 id: 账号id
 name: 角色名
 p_name:分区名
@@ -75,9 +73,9 @@ export default {
   data() {
     return {
       email: null,
-      qa_cate_id: '',
+      role_name: '',
       question: null,
-      user_cates: null,
+      issue_time: null,
       msg: null,
       msg_class: 'hide'
     };
@@ -102,17 +100,16 @@ export default {
       let data = {
         qa: {
           game_role_id: this.init_data.id,
-          game_role_name: this.init_data.name,
+          game_role_name: this.role_name,
           game_user_name: this.init_data.acc_name,
-          game_server_name: this.init_data.p_name,
-          qa_cate_id: this.qa_cate_id,
+          issure_time: this.issue_time,
           question: this.question,
           email: this.email
         },
         game_id: this.init_data.game_id
       };
       this.$http
-        .post('/en_qas', data)
+        .post('/en_qas/new_question', data)
         .then(res => {
           // console.log('then back');
           if (res.data.code === 'failed') {
@@ -125,6 +122,9 @@ export default {
             this.msg_class = 'success';
             this.qa_cate_id = null;
             this.question = null;
+            this.role_name = null;
+            this.issue_time = null;
+            this.email = null;
           }
         })
         .catch(error => {

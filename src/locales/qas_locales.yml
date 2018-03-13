@@ -36,6 +36,12 @@ en:
   next_page: Next Page
   no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
 
+  new_q_id: PIP ID
+  new_q_des: Please fill in the form
+  new_q_role_name: User Name
+  new_q_time: When it happened
+  new_q_email_des: Please leave a common email address.
+  new_q_detail: Detailed description
 
 
 th:
@@ -73,4 +79,11 @@ th:
   pending: กำลังดำเนิน
   next_page: หน้าถัดไป
   no_question_tip: ยังไม่มีคำถาม กดส่งเพื่อสร้างใหม่.
+
+  new_q_id: PIP ID
+  new_q_des: กรุณากรอกข้อมูล
+  new_q_role_name: ชื่อตัวละคร
+  new_q_time: เวลาที่เกิดปัญหา
+  new_q_email_des: ความคืบหน้าจะส่งไปยังอีเมลผู้เล่น กรุณาบอกอีเมลที่ใช้ประจำ
+  new_q_detail: อธิบาย
 

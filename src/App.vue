@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+    <div class="off-canvas position-right" id="offCanvas" data-off-canvas >
       <ul class="sidebar-menu" data-close="offCanvas">
         <li class="lang_select">
           <label>{{$t('language')}}</label>
@@ -35,7 +35,7 @@
           </ul>
         </div>
         <div class="cell small-6 shrink">
-          <ul class="menu toggle_menu">
+          <ul class="menu toggle_menu" v-if="init_data.hide_menu !== '1'">
             <li>
               <a class="button secondary menu-button  small" data-toggle="offCanvas">{{$t('menu')}}</a>
             </li>
@@ -92,6 +92,9 @@ export default {
       return Object.keys(this.$i18n.messages).map(function(item) {
         return [item, this.$t(item)];
       }, this);
+    },
+    init_data: function() {
+      return this.$localStorage.init_data;
     }
   }
 };

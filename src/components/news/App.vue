@@ -6,7 +6,7 @@
         <div class="cell auto">
         <h4 class="text-center">{{$t(`news_title.${init_data.game_id}`)}}</h4>
         </div>
-        <div class="cell small-2 text-right u_name">{{init_data.name}}</div>
+        <div class="cell small-2 text-right u_name">{{init_data.user_id}}</div>
       </div>
       <transition name="fade" mode="out-in">
         <router-view></router-view>
@@ -31,7 +31,8 @@ export default {
             .get('/news/list', {
               params: {
                 game_id: that.init_data.game_id,
-                cate_id: 9
+                cate_id: 9,
+                user_id: that.init_data.user_id
               }
             })
             .then(function(res) {

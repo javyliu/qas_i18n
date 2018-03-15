@@ -1,14 +1,13 @@
 <template>
   <ul class="list_news">
-    <router-link :to="{name: 'news_detail', params: {id: item.id }}" tag="li" v-for="item in news" class="grid-x grid-padding-x" :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id">
+    <router-link :to="{name: 'news_detail', params: {id: item.id }}"  v-for="item in news" tag="li" class="grid-x grid-padding-x divitem" :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id"  @click.native="set_readed(item.id)" >
       <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
-      <div class="cell auto"><div class="news_title">{{item.title}}</div>
+      <div class="cell auto" ><div class="news_title">{{item.title}}</div>
         <div class="g_line"></div>
         <div class="c_time">{{item.create_time}}</div>
-        <div class="pa tags"><span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
+        <div class="pa tags"><span :class="{readed: !item.is_readed}"></span> <span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
       </div>
     </router-link>
-
   </ul>
 </template>
 
@@ -24,6 +23,14 @@ export default {
         this.news = data;
       }.bind(this)
     );
+  },
+  methods: {
+    set_readed(newsId) {
+      let _clickedNews = this.news.find(function(item) {
+        return item.id === newsId;
+      });
+      _clickedNews && (_clickedNews.is_readed = true);
+    }
   },
 
   computed: {}
@@ -63,13 +70,14 @@ export default {
 
 .hot,
 .new,
-.top {
+.top,
+.readed {
   margin-right: -30px;
   display: inline-block;
   width: 54px;
-  height: 41px;
+  height: 48px;
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: left top;
 }
 .hot {
   background-image: url(../../assets/img/hot.png);
@@ -79,5 +87,10 @@ export default {
 }
 .top {
   background-image: url(../../assets/img/top.png);
+}
+.readed{
+  background-image: url(../../assets/img/th.png);
+  background-size: contain;
+  width:50px;
 }
 </style>

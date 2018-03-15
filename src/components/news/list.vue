@@ -1,7 +1,7 @@
 <template>
   <ul class="list_news">
-    <router-link :to="{name: 'news_detail', params: {id: item.id }}"  v-for="item in news" tag="li"  :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id"   >
-      <div class="grid-x grid-padding-x divitem" @click="set_readed(item.id)">
+    <router-link :to="{name: 'news_detail', params: {id: item.id }}"  v-for="item in news" tag="li"   :key="item.id"   >
+      <div class="grid-x grid-padding-x divitem" :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  @click="set_readed(item.id)">
         <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
         <div class="cell auto" ><div class="news_title">{{item.title}}</div>
           <div class="g_line"></div>

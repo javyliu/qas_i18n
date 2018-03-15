@@ -1,11 +1,13 @@
 <template>
   <ul class="list_news">
-    <router-link :to="{name: 'news_detail', params: {id: item.id }}"  v-for="item in news" tag="li" class="grid-x grid-padding-x divitem" :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id"  @click.native="set_readed(item.id)" >
-      <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
-      <div class="cell auto" ><div class="news_title">{{item.title}}</div>
-        <div class="g_line"></div>
-        <div class="c_time">{{item.create_time}}</div>
-        <div class="pa tags"><span :class="{readed: !item.is_readed}"></span> <span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
+    <router-link :to="{name: 'news_detail', params: {id: item.id }}"  v-for="item in news" tag="li"  :class="[(item.hot || item.ord > 10000) ? 'red_bg' : 'blue_bg' ]"  :key="item.id"   >
+      <div class="grid-x grid-padding-x divitem" @click="set_readed(item.id)">
+        <div class="cell small-2 border-right"><img :src="item.dis_img" alt="" class="img"></div>
+        <div class="cell auto" ><div class="news_title">{{item.title}}</div>
+          <div class="g_line"></div>
+          <div class="c_time">{{item.create_time}}</div>
+          <div class="pa tags"><span :class="{readed: !item.is_readed}"></span> <span :class="{new: item.is_new}"></span> <span :class="{top: item.ord > 10000}"></span> <span :class="{hot: item.hot}"></span></div>
+        </div>
       </div>
     </router-link>
   </ul>
@@ -46,7 +48,10 @@ export default {
 }
 .list_news {
   margin: 0;
-  li {
+  li{
+    list-style: none;
+  }
+  .divitem {
     margin: 5px;
     border-radius: 5px;
     position: relative;

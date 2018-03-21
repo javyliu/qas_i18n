@@ -2,7 +2,8 @@
   <div id="app" >
     <div class="grid-container full">
       <div class="grid-x title">
-        <div class="cell small-2"><img src="../../assets/img/back.png" v-show="$route.name !== 'home'" @click="$router.go(-1)"></div>
+        <div class="cell small-2"><img src="../../assets/img/back.png" v-show="$route.name !== 'home'" @click="$router.go(-1)">
+        <img src="../../assets/img/exit32.png" v-show="$route.name === 'home'" @click="exit"></div>
         <div class="cell auto">
         <h4 class="text-center">{{$t(`news_title.${init_data.game_id}`)}}</h4>
         </div>
@@ -41,6 +42,10 @@ export default {
             });
         }
       });
+    },
+    exit() {
+      // console.log('----------------exit');
+      location.href = 'pipcb:CLOSE';
     }
   },
   computed: {

@@ -8,7 +8,7 @@ gulp.task('deploy_to_web', function () {
       root: 'dist',
       username: 'oswap',
       progress: true,
-      hostname: 'gamepip.com',
+      hostname: 'qa.gamepip.com',
       destination: '/home/oswap/qas_i18n',
       //destination: '../../web_apps/inner_app',
       // exclude: ['*.swp'],

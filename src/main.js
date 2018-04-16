@@ -10,6 +10,7 @@ import axios from 'axios';
 import VueAxios from 'vue-axios';
 import VueLocalStorage from 'vue-localstorage';
 import _global from './global_config';
+import 'babel-polyfill';
 
 Vue.use(VueLocalStorage, {
   createComputed: true

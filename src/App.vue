@@ -72,7 +72,7 @@ export default {
       this.global.user_cates = null;
       this.global.common_cates = null;
       if (this.$route.name === 'home') {
-        console.log('current page');
+        // console.log('current page');
         // this.global.getCommonCates();
         this.$router.push({
           name: 'home',

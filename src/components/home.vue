@@ -11,11 +11,21 @@
             Loading...
           </div>
           <ul v-if="common_cates">
-            <li v-for="item in common_cates" :key="item.id">
+            <li v-for="item in common_cates" :key="item.id" :class="{spec: item.ord===1000}">
               <router-link :to="{path: `/cates/list_qas/${item.id}`}" v-once>{{item.name}}</router-link>
             </li>
           </ul>
         </fieldset>
+      </div>
+    </div>
+    <div class="grid-x">
+      <div class="cell  small-6 text-center">
+        <br>
+        <router-link to="/new_ticket" class="button alert">{{$t('submit_ticket')}}</router-link>
+      </div>
+      <div class="cell  small-6 text-center">
+        <br>
+        <router-link to="/my_tickets" class="button alert">{{$t('my_tickets')}}</router-link>
       </div>
     </div>
   </div>

@@ -24,5 +24,6 @@ export default {
       if (obj.hasOwnProperty(prop)) { return false; }
     }
     return true;
-  }
+  },
+  states: {0: {key: 'pending', css: 'warning'}, 1: {key: 'pending', css: 'warning'}, 2: {key: 'completed', css: 'success'}}
 };

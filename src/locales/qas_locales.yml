@@ -3,13 +3,13 @@ en:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
   btn_search: Search
   search_holder: Find an Answer
 
@@ -50,12 +50,10 @@ en:
   new_q_email_des: Please leave a common email address.
   new_q_detail: Detailed description
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: All Questions
+  upload_pic: Submit screenshots
+  issue_time: When occurred
+  reply: Reply
 
 
 th:
@@ -64,13 +62,13 @@ th:
   th: ภาษาไทย
   btn_search: ค้นหา
   search_holder: ค้นหาคำถาม
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
 
   support_home: หน้าแรก
   all_qa: คำถามทั้งหมด
@@ -107,418 +105,402 @@ th:
   new_q_time: เวลาที่เกิดปัญหา
   new_q_email_des: ความคืบหน้าจะส่งไปยังอีเมลผู้เล่น กรุณาบอกอีเมลที่ใช้ประจำ
   new_q_detail: อธิบาย
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: คำถามทั้งหมด
+  upload_pic: ส่งรูปเเคปสกรีน
+  issue_time: ปัญหาเกินขึ้นตอนไหน
+  reply: ตอบ
 
 
 tr:
-  display_name: English
+  display_name: Türkçe
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Ara
+  search_holder: Cevap ara
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
-  menu: Menu
+  support_home: Ana Sayfa
+  all_qa: Tüm Sorular
+  submit_ticket: Soruyu yükle
+  language: Dil
+  hot_issues: Popüler Konular
+  menu: Menü
 
-  category: CATEGORIES
-  c_all: All
+  category: Dizin
+  c_all: Tümü
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: İstek hatası!
+  submit_success: Yükleme işlemi başarılı!
+  submit_failed: Yükleme başarısız!
+  submit_ticket_title: Bilgi
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: E-posta Adresi
+  ticket_topic: Tür
+  ticket_detail: Ayrıntılar
+  td_des: 400 kelimelik yorumlar ve sorular
+  td_promise: 24 saat içinde size cevap vereceğiz!!
+  ticket_btn: Yükle
+  ticket_select: Kategori
+  my_tickets: Sorularım
 
-  completed: Completed
-  pending: Pending
+  completed: Tamamlandı
+  pending: Çözüm Bekleyen
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Sonraki sayfa
+  no_question_tip: Mevcut durumda kesin bir cevap yok. Yeni bir soru oluşturmak için lütfen "Yükle" butonuna tıklayın.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_des: lütfen formu doldurun
+  new_q_role_name: Nama pengguna
+  new_q_time: Sorun Oluşma Süresi
+  new_q_email_des: E-posta Adresi
+  new_q_detail: Ayrıntılar
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Tüm Sorular
+  upload_pic: Ekran resmi gönder
+  issue_time: Sorun Oluşma Süresi
+  reply: Cevap
 
 pt:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Pesquisar
+  search_holder: Encontrar uma Resposta
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
+  support_home: Página Inicial de Suporte
+  all_qa: Todas as Perguntas
+  submit_ticket: Envie um Bilhete
+  language: Idiomas
+  hot_issues: Tópicos Quentes
   menu: Menu
 
-  category: CATEGORIES
-  c_all: All
+  category: CATEGORIAS
+  c_all: Tudo
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: Solicitar erro!
+  submit_success: Bilhete enviado com sucesso!
+  submit_failed: Falha ao enviar bilhete!
+  submit_ticket_title: Mensagem
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Endereço de E-mail
+  ticket_topic: Categoria
+  ticket_detail: Detalhe
+  td_des: Comentário ou Pergunta dentro de 400 palavras.
+  td_promise: Nós prometemos responder em 24 horas!!
+  ticket_btn: ENVIAR
+  ticket_select: Sujeito
+  my_tickets: Meus Bilhetes
 
-  completed: Completed
-  pending: Pending
+  completed: Concluído
+  pending: Pendente
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Próxima Página
+  no_question_tip: Nenhuma resposta exata ainda. Clique em "Enviar um bilhete" para criar um novo.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_des: Por favor, preencha o formulário
+  new_q_role_name: Nome de usuário
+  new_q_time: Quando ocorrer um problema
+  new_q_email_des: Endereço de E-mail
+  new_q_detail: Detalhe
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Todas as Perguntas
+  upload_pic: Faça o upload da imagem de tela
+  issue_time: Quando ocorrer um problema
+  reply: Resposta do Serviço ao Cliente
 
 ru:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Искать
+  search_holder: Найти ответ
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
-  menu: Menu
+  support_home: Главная страница поддержки
+  all_qa: Все вопросы
+  submit_ticket: Отправить заявку
+  language: Языки
+  hot_issues: Популярные темы
+  menu: Меню
 
-  category: CATEGORIES
-  c_all: All
+  category: КАТЕГОРИИ
+  c_all: Все
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: Ошибка запроса!
+  submit_success: Заявка успешно отправлена!
+  submit_failed: Ошибка отправки заявки!
+  submit_ticket_title: Сообщение
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Адрес эл. почты
+  ticket_topic: Категория
+  ticket_detail: Детали
+  td_des: Комментарий или вопрос не длиннее 400 слов.
+  td_promise: Мы обещаем ответить в течение 24 часов!
+  ticket_btn: Подчинение
+  ticket_select: Предмет
+  my_tickets: Мои заявки
 
-  completed: Completed
-  pending: Pending
+  completed: Завершено
+  pending: Ожидание
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Следующая страница
+  no_question_tip: Еще нет точного ответа. Нажмите "Отправить заявку", чтобы создать новую.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_des: пожалуйста, заполните форму
+  new_q_role_name: Имя пользователя
+  new_q_time: Время возникновения проблемы
+  new_q_email_des: Адрес эл. почты
+  new_q_detail: Детали
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Все вопросы
+  upload_pic: Загрузить скриншоты
+  issue_time: Время возникновения проблемы
+  reply: Ответ службы поддержки
 
 id:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Cari
+  search_holder: Temukan Jawaban
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
+  support_home: Beranda
+  all_qa: Semua Pertanyaan
+  submit_ticket: Kirim Pertanyaan
+  language: Bahasa
+  hot_issues: Populer
   menu: Menu
 
-  category: CATEGORIES
-  c_all: All
+  category: KATEGORI
+  c_all: Semua
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: Permintaan error!
+  submit_success: Berhasil mengirim!
+  submit_failed: Gagal mengirim!
+  submit_ticket_title: Pesan
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Alamat Email
+  ticket_topic: Kategori
+  ticket_detail: Rincian
+  td_des: Beri Komentar atau Pertanyaan maks 400 kata.
+  td_promise: Kami berjanji untuk merespon dalam 24 jam!
+  ticket_btn: Mengabdi
+  ticket_select: Subyek
+  my_tickets: Pertanyaanku
 
-  completed: Completed
-  pending: Pending
+  completed: Selesai
+  pending: Tertunda
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Halaman Berikutnya
+  no_question_tip: Belum ada jawaban. Klik "Kirim Pertanyaan" untuk membuat baru.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
+  new_q_des: tolong isi formulirnya
+  new_q_role_name: Nama pengguna
+  new_q_time: Waktu kejadian
   new_q_email_des: Please leave a common email address.
   new_q_detail: Detailed description
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Semua Pertanyaan
+  upload_pic: Unggah screenshot
+  issue_time: Waktu kejadian
+  reply: Balasan
 
 
 de:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Suche
+  search_holder: Finde eine Antwort
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
-  menu: Menu
+  support_home: Unterstützung zu Hause
+  all_qa: Alle Fragen
+  submit_ticket: Reiche ein Ticket ein
+  language: Sprachen
+  hot_issues: Heiße Themen
+  menu: Menü
 
-  category: CATEGORIES
-  c_all: All
+  category: KATEGORIEN
+  c_all: Alle
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: Fehler anfragen!
+  submit_success: Ticket einreichen erfolgreich!
+  submit_failed: Ticket einreichen fehlgeschlagen!
+  submit_ticket_title: Nachricht
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Email Adresse
+  ticket_topic: Kategorie
+  ticket_detail: Deteil
+  td_des: Kommentar oder Frage innerhalb von 400 Wörtern.
+  td_promise: Wir versprechen, in 24 Stunden zu antworten !!
+  ticket_btn: Einreichen
+  ticket_select: Thema
+  my_tickets: Meine Tickets
 
-  completed: Completed
-  pending: Pending
+  completed: Abeschlossen
+  pending: Bevorstehend
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Nächste Seite
+  no_question_tip: Noch keine genaue Antwort. Klicken Sie auf "Ticket senden", um ein neues zu erstellen.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_des: bitte füllen sie das formular
+  new_q_role_name: Nutzername
+  new_q_time: Zeit des Problems
+  new_q_email_des: Email Adresse
+  new_q_detail: Deteil
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Alle Fragen
+  upload_pic: Screenshots hochladen
+  issue_time: Zeit des Problems
+  reply: Antwort
 
 fr:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Recherche
+  search_holder: Trouver une réponse
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
+  support_home: Accueil
+  all_qa: Toutes les questions
+  submit_ticket: Soumettre une question
+  language: Langues
+  hot_issues: Sujets populaires
   menu: Menu
 
-  category: CATEGORIES
-  c_all: All
+  category: CATÉGORIES
+  c_all: Tous
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
+  error_request: Erreur de requête!
+  submit_success: Soumission réussie!
+  submit_failed: Échec de la soumission!
   submit_ticket_title: Message
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Adresse e-mail
+  ticket_topic: Catégorie
+  ticket_detail: Détail
+  td_des: Commentaire ou question doit faire moins de 400 mots.
+  td_promise: Nous répondrons dans les 24 heures!
+  ticket_btn: Soumettre
+  ticket_select: Sujet
+  my_tickets: Mes questions
 
-  completed: Completed
-  pending: Pending
+  completed: Terminé
+  pending: En attente
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Page suivante
+  no_question_tip: Pas encore de réponse exacte.Cliquez sur "Soumettre une question" pour créer une nouvelle question.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
-  new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_des: veuillez remplir le formulaire
+  new_q_role_name: Nom d'utilisateur
+  new_q_time: Date du problème
+  new_q_email_des: Adresse e-mail
+  new_q_detail: Détail
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Toutes les questions
+  upload_pic: Capture d'écran
+  issue_time: Date du problème
+  reply: Répondre
 
 vi:
   display_name: English
   en: English
   th: ภาษาไทย
-  tr: 土耳其
-  pt: 葡语
-  ru: 俄语
-  id: 印尼语
-  de: 德语
-  fr: 法语
-  vi: 越南语
-  btn_search: Search
-  search_holder: Find an Answer
+  tr: Türkçe
+  pt: Português
+  ru: Русский
+  id: Bahasa Indonesia
+  de: Deutsch
+  fr: Français
+  vi: Tiếng Việt
+  btn_search: Tìm kiếm
+  search_holder: Tìm đáp án
 
-  support_home: Support Home
-  all_qa: All Questions
-  submit_ticket: Submit a Ticket
-  language: Languages
-  hot_issues: Hot Topics
+  support_home: Trang chính
+  all_qa: Toàn bộ vấn đề
+  submit_ticket: Upload vẫn đề
+  language: Ngôn Ngữ
+  hot_issues: Vấn đề hot
   menu: Menu
 
-  category: CATEGORIES
-  c_all: All
+  category: Mục lục
+  c_all: Toàn bộ
 
-  error_request: Request error!
-  submit_success: Ticket submit success!
-  submit_failed: Ticket submit failed!
-  submit_ticket_title: Message
+  error_request: Lỗi yêu cầu
+  submit_success: Upload thành công!
+  submit_failed: Upload thất bại!
+  submit_ticket_title: Thông tin
   ticket_id: ID
-  ticket_email: Email Address
-  ticket_topic: Category
-  ticket_detail: Detail
-  td_des: Comment or Question within 400 words
-  td_promise: We promise to respond in 24 hours
-  ticket_btn: SUBMIT
-  ticket_select: Subject
-  my_tickets: My Tickets
+  ticket_email: Địa chỉ thư
+  ticket_topic: Loại
+  ticket_detail: Chi tiết
+  td_des: Bình luận hoặc câu hỏi trong 400 chữ.
+  td_promise: Chúng tôi sẽ trả lời bạn trong 24 giờ sau khi nhận được phản hồi!
+  ticket_btn: Upload
+  ticket_select: Loại
+  my_tickets: Vấn đề của tôi
 
-  completed: Completed
-  pending: Pending
+  completed: Đã hoàn thành
+  pending: Đợi giải quyết
 
-  next_page: Next Page
-  no_question_tip: No exact answer yet. Click “Submit a Ticket” to create a new one.
+  next_page: Trang tiếp
+  no_question_tip: Chưa có đáp án chính xác, hãy nhấp "Upload" để tạo câu hỏi mới.
 
   new_q_id: PIP ID
-  new_q_des: Please fill in the form
-  new_q_role_name: User Name
+  new_q_des: Please Hãy điền vào mẫu này.
+  new_q_role_name: Tên người dùng
   new_q_time: When it happened
-  new_q_email_des: Please leave a common email address.
-  new_q_detail: Detailed description
+  new_q_email_des: Địa chỉ thư
+  new_q_detail: Chi tiết
 
-  search_holder: 寻找答案
-  support_home: 主页
-  all_qas: 所有问题
-  upload_pic: 上传截图
-  issue_time: 问题发生时间
-  reply: 客服回复
+  all_qas: Toàn bộ vấn đề
+  upload_pic: Cắt hình
+  issue_time: Thời gian xảy ra lỗi
+  reply: CSKH trả lời
 

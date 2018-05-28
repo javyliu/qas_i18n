@@ -4,7 +4,8 @@
       <ul class="sidebar-menu" data-close="offCanvas">
         <li class="lang_select">
           <label>{{$t('language')}}</label>
-          <div class="grid-x grid-padding-x small-up-2">
+          <button class="button success expanded " @click.stop="showList">{{$t($i18n.locale)}}</button>
+          <div v-show="disLanSelect" class="grid-x grid-padding-x small-up-2">
             <a href="#" v-for="(lan, index) in languages" :key="index" @click.prevent="change_language(lan[0])" :class="{active: $i18n.locale === lan[0]}">{{lan[1]}}</a>
           </div>
         </li>
@@ -52,19 +53,24 @@
 </template>
 
 <script>
+
 export default {
   name: 'app',
   // props: ['ccn'],
   mounted() {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
-    this.select_lan = new Foundation.DropdownMenu($('.dropdown'), {
-      disableHover: true,
-      clickOpen: true,
-      alignment: 'right'
-    });
+  },
+  data() {
+    return {
+      disLanSelect: false
+    };
   },
   methods: {
+    showList() {
+      this.disLanSelect = !this.disLanSelect;
+    },
     change_language: function(curLan) {
+      this.disLanSelect = false;
       if (this.$i18n.locale === curLan) {
         return;
       }
@@ -96,6 +102,8 @@ export default {
     init_data: function() {
       return this.$localStorage.init_data;
     }
+  },
+  components: {
   }
 };
 </script>

@@ -21,7 +21,7 @@
               <label>{{$t("ticket_email")}}
                 <em>*</em>
               </label>
-              <input type="email" v-model="email" placeholder="javy@pearlinpalm.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" />
+              <input type="email" v-model="email" placeholder="javy@gamepip.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" />
             </div>
             <div class="cell">
               <label>{{$t("ticket_topic")}}
@@ -32,6 +32,12 @@
                 <option v-for="item in user_cates" :key="item.id" :value="item.id">{{item.name}}</option>
               </select>
             </div>
+            <div class="cell">
+              <label>{{$t("issue_time")}}
+                <em>*</em>
+              </label>
+              <input type="datetime-local" v-model="issure_time" required="required" />
+            </div>
           </div>
           <div class="grid-x">
             <div class="cell">
@@ -40,7 +46,7 @@
                 <small> {{$t("td_des")}} </small>
                 <em>*</em>
               </label>
-              <textarea placeholder="Detail" required="required" v-model="question" id="en_qa_question">
+              <textarea :placeholder="$t('new_q_detail')" required="required" v-model="question" id="en_qa_question">
               </textarea>
             </div>
           </div>
@@ -70,6 +76,8 @@ acc_name：账号名
 version：客户端版本号
 lang：语言
 */
+import dateformat from 'dateformat';
+
 export default {
   name: 'new_ticket',
   data() {
@@ -79,7 +87,8 @@ export default {
       question: null,
       user_cates: null,
       msg: null,
-      msg_class: 'hide'
+      msg_class: 'hide',
+      issure_time: dateformat(new Date(), "yyyy-mm-dd'T'HH:MM:'00'")
     };
   },
   created() {
@@ -91,7 +100,6 @@ export default {
   },
   computed: {
     init_data: function() {
-      console.log('调用计算属性');
       return this.$localStorage.init_data;
     }
   },
@@ -107,7 +115,8 @@ export default {
           game_server_name: this.init_data.p_name,
           qa_cate_id: this.qa_cate_id,
           question: this.question,
-          email: this.email
+          email: this.email,
+          issure_time: this.issure_time
         },
         game_id: this.init_data.game_id
       };

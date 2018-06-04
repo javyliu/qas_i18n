@@ -17,7 +17,7 @@
               {{reply.content}}
               <div class="time text-right"> <span class='cr_time'>--{{reply.created_at}}</span></div>
             </div>
-            <div class="indent_2em">{{item.answer}}</div>
+            <div class="pl_1em" v-html="item.answer"></div>
             <div  v-if="item.answer" class="time text-right"><a v-if="item.state !== 0" class="alert badge" @click="showReply(item)">{{$t('reply')}}</a> <span class='cr_time'>--{{item.updated_at}}</span></div>
             <div v-if="item.answer" v-show="item.showFeeback"  class="grid-x mt_8">
               <div class="cell auto">
@@ -99,6 +99,7 @@ export default {
               item.showFeeback = false;
               item.error_class = '';
               item.content = '';
+              item.answer = item.answer.replace(/\r\n/g, '<br>');
               // if (item.answer) {
               //   item.css_class = 'success';
               //   item.state_des = this.$i18n.t('completed');

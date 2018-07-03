@@ -99,7 +99,7 @@ export default {
               item.showFeeback = false;
               item.error_class = '';
               item.content = '';
-              item.answer = item.answer.replace(/\r\n/g, '<br>');
+              item.answer = item.answer ? item.answer.replace(/\r\n/g, '<br>') : "";
               // if (item.answer) {
               //   item.css_class = 'success';
               //   item.state_des = this.$i18n.t('completed');

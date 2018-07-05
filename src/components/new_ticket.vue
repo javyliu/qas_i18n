@@ -32,20 +32,26 @@
                 <option v-for="item in user_cates" :key="item.id" :value="item.id">{{item.name}}</option>
               </select>
             </div>
-            <div class="cell">
+          </div>
+          <div class="grid-x  grid-margin-x">
+            <div class="cell medium-4">
               <label>{{$t("issue_time")}}
                 <em>*</em>
               </label>
               <input type="datetime-local" v-model="issure_time" required="required" name="issure_time" />
             </div>
-            <div class="cell">
+            <div class="cell medium-8">
               <label>{{$t("upload_pic")}}
                 <em>&nbsp;</em>
               </label>
-              <span class="img_list">
-                <img :src="item" alt=""  v-for="(item,idx) in files" :key="idx">
-              </span>
-              <img-inputer auto-upload v-model="file" theme="light" size="small"  :bottom-text="$t('upload_pic')" accept="image/png,image/gif,image/jpeg" :action="global.UploadUrl" :on-error="onErr" :on-success="fileChange" :placeholder="$t('upload_pic')"/>
+              <div class='grid-x'>
+                <div class="cell medium-5">
+                  <img-inputer auto-upload v-model="file" theme="light" size="small"  :bottom-text="$t('upload_pic')" accept="image/png,image/gif,image/jpeg" :action="global.UploadUrl" :on-error="onErr" :on-success="fileChange" :placeholder="$t('upload_pic')"/>
+                </div>
+                <div class="cell img_list medium-7">
+                  <img :src="item" alt=""  v-for="(item,idx) in files" :key="idx">
+                </div>
+              </div>
             </div>
           </div>
           <div class="grid-x">
@@ -60,6 +66,9 @@
             </div>
           </div>
           <blockquote>{{$t("td_promise")}}</blockquote>
+          <div class="callout" :class="msg_class">
+            <h5>{{msg}}</h5>
+          </div>
           <div class="actions">
             <input type="submit" name="commit" :value="$t('ticket_btn')" class="button tiny" />
           </div>
@@ -159,6 +168,8 @@ export default {
             this.msg_class = 'success';
             this.qa_cate_id = null;
             this.question = null;
+            this.files = [];
+            this.file = null;
           }
         })
         .catch(error => {
@@ -180,6 +191,8 @@ export default {
 <style lang="scss">
 .img_list img{
   vertical-align: top;
+  width:70px;
+  padding-right:4px;
 }
 </style>
 

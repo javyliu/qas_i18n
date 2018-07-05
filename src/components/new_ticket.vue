@@ -21,13 +21,13 @@
               <label>{{$t("ticket_email")}}
                 <em>*</em>
               </label>
-              <input type="email" v-model="email" placeholder="javy@gamepip.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" />
+              <input type="email" v-model="email" placeholder="javy@gamepip.com" required="required" pattern="^([^@ ]+)@((?:[-a-z0-9]+.)+[a-z]{2,})$" name='email' />
             </div>
             <div class="cell">
               <label>{{$t("ticket_topic")}}
                 <em>*</em>
               </label>
-              <select required="required" v-model="qa_cate_id">
+              <select required="required" v-model="qa_cate_id" name="qa_cate_id">
                 <option value="">{{$t("ticket_select")}}</option>
                 <option v-for="item in user_cates" :key="item.id" :value="item.id">{{item.name}}</option>
               </select>
@@ -36,7 +36,16 @@
               <label>{{$t("issue_time")}}
                 <em>*</em>
               </label>
-              <input type="datetime-local" v-model="issure_time" required="required" />
+              <input type="datetime-local" v-model="issure_time" required="required" name="issure_time" />
+            </div>
+            <div class="cell">
+              <label>{{$t("upload_pic")}}
+                <em>&nbsp;</em>
+              </label>
+              <span class="img_list">
+                <img :src="item" alt=""  v-for="(item,idx) in files" :key="idx">
+              </span>
+              <img-inputer auto-upload v-model="file" theme="light" size="small"  :bottom-text="$t('upload_pic')" accept="image/png,image/gif,image/jpeg" :action="global.UploadUrl" :on-error="onErr" :on-success="fileChange" :placeholder="$t('upload_pic')"/>
             </div>
           </div>
           <div class="grid-x">
@@ -46,7 +55,7 @@
                 <small> {{$t("td_des")}} </small>
                 <em>*</em>
               </label>
-              <textarea :placeholder="$t('new_q_detail')" required="required" v-model="question" id="en_qa_question">
+              <textarea :placeholder="$t('new_q_detail')" required="required" v-model="question" id="en_qa_question" name="question">
               </textarea>
             </div>
           </div>
@@ -77,6 +86,8 @@ version：客户端版本号
 lang：语言
 */
 import dateformat from 'dateformat';
+import ImgInputer from 'vue-img-inputer';
+import 'vue-img-inputer/dist/index.css';
 
 export default {
   name: 'new_ticket',
@@ -87,6 +98,8 @@ export default {
       question: null,
       user_cates: null,
       msg: null,
+      files: [],
+      file: null,
       msg_class: 'hide',
       issure_time: dateformat(new Date(), "yyyy-mm-dd'T'HH:MM:'00'")
     };
@@ -103,9 +116,20 @@ export default {
       return this.$localStorage.init_data;
     }
   },
+  components: {
+    ImgInputer
+  },
   methods: {
+    fileChange(res, file) {
+      this.files.push(res.img_url);
+      // console.log('res --> ', res);
+      // console.log('file -->', file);
+    },
+    onErr(err, file) {
+      console.log('err', err);
+    },
     ask() {
-      console.log('form is submit');
+      console.log('form is submit', this.files);
 
       let data = {
         qa: {
@@ -116,7 +140,8 @@ export default {
           qa_cate_id: this.qa_cate_id,
           question: this.question,
           email: this.email,
-          issure_time: this.issure_time
+          issure_time: this.issure_time,
+          files: this.files
         },
         game_id: this.init_data.game_id
       };
@@ -153,7 +178,9 @@ export default {
 </script>
 
 <style lang="scss">
-
+.img_list img{
+  vertical-align: top;
+}
 </style>
 
 

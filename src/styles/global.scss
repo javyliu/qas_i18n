@@ -71,6 +71,9 @@
 .reveal-overlay {
   overflow: hidden !important;
 }
+.close-button{
+  top:0;
+}
 .title {
   box-shadow:1px 1px 9px #4CF;
   position: fixed;
@@ -95,3 +98,30 @@
 }
 
 .cr_time{font-size: 12px;font-weight: normal;}
+
+.top_notice{
+  font-size: 12px;
+  color: #fff;
+  background: #f90;
+  border-radius: 5px;
+  padding: 2px 5px;
+  display: inline-block;
+  line-height: 16px;
+  text-align: center;
+  margin-top:-10px;
+}
+
+.par{
+  position:absolute;
+  top:0;
+  right:0;
+}
+.pal{
+  position:absolute;
+  top:10px;
+  right:20%;
+}
+
+html.is-reveal-open, html.is-reveal-open body{
+  position: relative;
+}

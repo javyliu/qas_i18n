@@ -11,6 +11,9 @@
               <span class="badge" :class="item.css_class">{{index + 1}}</span>
               <span class="label" :class="item.css_class">{{item.state_des}}</span>
               {{item.question}}
+              <div class='img_list'>
+                <img :src="img" alt=""  v-for="(img,idx) in item.files" :key="idx" @click='showBig(img)'>
+              </div>
               <div class="time text-right"> <span class='cr_time'>--{{item.created_at}}</span></div>
             </div>
             <div class="title" v-for="reply in item.en_qa_feebacks" :key="reply.id">
@@ -33,10 +36,12 @@
       </fieldset>
       <a class="button success expanded mt_8 text-center" v-if="this.current_page" @click="list">{{$t('next_page')}}</a>
     </div>
+    <reveal ref="reveal"></reveal>
   </div>
 </template>
 
 <script>
+import Reveal from '@/components/Reveal';
 
 export default {
   name: 'list_qas',
@@ -49,9 +54,15 @@ export default {
   },
   created() {
     this.list();
+    this.$parent.$data.unreaded_count = 0;
   },
-
+  components: {
+    Reveal
+  },
   methods: {
+    showBig(img) {
+      this.$refs.reveal.openReveal("<img src='" + img.replace('small', 'middle') + "'>");
+    },
     askAgain(_item) {
       if (_item.content.length === 0) {
         _item.error_class = 'border_red';
@@ -63,7 +74,7 @@ export default {
           content: _item.content
         })
         .then(res => {
-          _item.en_qa_feebacks.push({content: res.data.content, created_at: res.data.created_at});
+          _item.en_qa_feebacks.push({ content: res.data.content, created_at: res.data.created_at });
           _item.content = '';
           _item.showFeeback = false;
           _item.error_class = '';
@@ -99,7 +110,7 @@ export default {
               item.showFeeback = false;
               item.error_class = '';
               item.content = '';
-              item.answer = item.answer ? item.answer.replace(/\r\n/g, '<br>') : "";
+              item.answer = item.answer ? item.answer.replace(/\r\n/g, '<br>') : '';
               // if (item.answer) {
               //   item.css_class = 'success';
               //   item.state_des = this.$i18n.t('completed');
@@ -127,11 +138,13 @@ export default {
     text-indent: 2em;
     text-align: justify;
 
-    position:relative;
+    position: relative;
     text-indent: 0;
     margin-bottom: 5px;
     font-weight: bold;
-
+  }
+  div.img_list img{
+    padding:4px;
   }
 }
 </style>

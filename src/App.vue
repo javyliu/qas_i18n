@@ -18,8 +18,8 @@
         <li>
           <router-link to="/new_ticket">{{$t('submit_ticket')}}</router-link>
         </li>
-        <li>
-          <router-link to="/my_tickets">{{$t('my_tickets')}}</router-link>
+        <li class='pr'>
+          <router-link to="/my_tickets">{{$t('my_tickets')}}&nbsp;<span class="top_notice"  v-if="unreaded_count">{{unreaded_count}}</span></router-link>
         </li>
       </ul>
     </div>
@@ -39,6 +39,7 @@
           <ul class="menu toggle_menu" v-if="init_data.hide_menu !== '1'">
             <li>
               <a class="button secondary menu-button  small" data-toggle="offCanvas">{{$t('menu')}}</a>
+              <span class="top_notice par" v-if="unreaded_count">{{unreaded_count}}</span>
             </li>
           </ul>
         </div>
@@ -53,16 +54,24 @@
 </template>
 
 <script>
-
 export default {
   name: 'app',
   // props: ['ccn'],
   mounted() {
     this.offCanvas = new Foundation.OffCanvas($('#offCanvas'));
+    this.$http.get('/en_qas/replayed_count', {
+      params: {
+        game_id: this.$localStorage.init_data.game_id,
+        game_role_id: this.$localStorage.init_data.id
+      }
+    }).then(res => {
+      this.unreaded_count = res.data.unreaded;
+    });
   },
   data() {
     return {
-      disLanSelect: false
+      disLanSelect: false,
+      unreaded_count: 0
     };
   },
   methods: {
@@ -103,8 +112,7 @@ export default {
       return this.$localStorage.init_data;
     }
   },
-  components: {
-  }
+  components: {}
 };
 </script>
 
@@ -163,11 +171,6 @@ a:focus {
 }
 
 .dropdown.menu {
-  li.is-active {
-    a {
-    }
-  }
-
   .menu li {
     font-size: 14px;
   }

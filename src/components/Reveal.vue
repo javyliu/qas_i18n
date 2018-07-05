@@ -4,7 +4,7 @@
     <div class="x-grid">
       <div id="reveal-dialog" class="reveal small" data-reveal>
         <p class="lead">{{title}}</p>
-        <p>{{content}}</p>
+        <p v-html='content'></p>
         <button class="close-button" data-close aria-label="Close modal" type="button">
           <span aria-hidden="true">&times;</span>
         </button>

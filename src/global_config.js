@@ -1,6 +1,7 @@
 // import messages from './locales.yml';
 export default {
   BaseUrl: process.env.API_URL,
+  UploadUrl: process.env.upload_url,
   game_id: 19,
   getLanguage: function(messages) {
     let langs = Object.keys(messages).join('|');

@@ -149,7 +149,7 @@ export default {
           qa_cate_id: this.qa_cate_id,
           question: this.question,
           email: this.email,
-          issure_time: this.issure_time,
+          issure_time: (new Date(this.issure_time)).toUTCString(),
           files: this.files
         },
         game_id: this.init_data.game_id

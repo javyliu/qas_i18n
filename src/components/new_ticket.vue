@@ -70,7 +70,7 @@
             <h5>{{msg}}</h5>
           </div>
           <div class="actions">
-            <input type="submit" name="commit" :value="$t('ticket_btn')" class="button tiny" />
+            <input type="submit" name="commit" :value="$t('ticket_btn')" :disabled="btn_disabled" class="button tiny" />
           </div>
         </form>
       </fieldset>
@@ -110,6 +110,7 @@ export default {
       files: [],
       file: null,
       msg_class: 'hide',
+      btn_disabled: false,
       issure_time: dateformat(new Date(), "yyyy-mm-dd'T'HH:MM:'00'")
     };
   },
@@ -139,7 +140,7 @@ export default {
     },
     ask() {
       console.log('form is submit', this.files);
-
+      this.btn_disabled = true;
       let data = {
         qa: {
           game_role_id: this.init_data.id,
@@ -182,6 +183,9 @@ export default {
             this.msg = error.message;
           }
           this.msg_class = 'alert';
+        })
+        .then(() => {
+          this.btn_disabled = false;
         });
     }
   }
